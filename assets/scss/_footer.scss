@@ -1,0 +1,53 @@
+.footer {
+  padding: 60px 0 20px;
+  background: #fafafa;
+  &__buttons {
+    a.btn {
+      background: #e53935;
+    }
+  }
+  &__bottom {
+    color: #999;
+    font-family: "PT Sans";
+    font-size: 14px;
+    margin-top: 60px;
+    ul {
+      gap: 133px;
+      a {
+        color: #999;
+      }
+    }
+  }
+  &__section {
+    gap: 24px;
+    .footer__address {
+      margin-bottom: 0;
+    }
+    .footer__title {
+      margin-bottom: 0;
+    }
+  }
+  &__working-hours {
+    span {
+      color: #999;
+    }
+  }
+  &__title {
+    color: #999;
+    font-family: "PT Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__list {
+    margin-top: 20px;
+    gap: 20px;
+    a {
+      color: #212121;
+    }
+  }
+  .footer__contacts {
+    gap: 24px;
+  }
+}

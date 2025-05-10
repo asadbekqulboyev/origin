@@ -1,0 +1,64 @@
+.certificates {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .content {
+    width: calc(75% - 16px);
+    gap: 20px;
+    ul {
+      padding-left: 40px;
+      gap: 10px;
+    }
+    li {
+      list-style: initial;
+    }
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    backdrop-filter: blur(1px);
+    opacity: 1;
+    svg {
+      width: 20px;
+    }
+  }
+  .swiper-button-prev {
+    left: -20px;
+  }
+  .swiper-button-next {
+    right: -20px;
+  }
+  .swiper {
+    width: 100%;
+  }
+  .sertficates_content {
+    border-radius: 4px;
+    background: #fafafa;
+    width: calc(25% - 8px);
+    padding: 12px 52px;
+    gap: 8px;
+    position: relative;
+    .sertficates_content_bottom {
+      width: 100%;
+      color: #212121;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      button {
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0;
+        outline: none;
+        border: 0;
+        background: transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.delivery {
+  .delivery_block {
+    background-color: #fff;
+    padding: 24px 0 0;
+    .truck_overlay {
+      bottom: 6px;
+      right: 80px;
+      max-width: 380px;
+    }
+    .row {
+      padding: 0;
+      .col-md-6 {
+        padding-right: 8px !important;
+        &:last-child {
+          padding-right: 0;
+          padding-left: 8px !important;
+        }
+      }
+    }
+    .delivery_text {
+      padding: 24px 47px 24px 24px;
+    }
+
+    .tk_list {
+      gap: 4px;
+      li {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        a {
+          color: #212121;
+          height: 80px;
+          border-radius: 4px;
+          background: #fafafa;
+          padding: 10px 40px;
+          img {
+            transition: all 0.2s linear;
+          }
+          &:hover {
+            img:last-child {
+              transform: rotate(45deg);
+            }
+          }
+          span {
+            width: 33%;
+          }
+        }
+      }
+    }
+
+    .delivery_items {
+      margin-top: 16px;
+      h6 {
+        font-weight: bold;
+        color: #e4002b;
+        margin-bottom: 4px;
+      }
+      p {
+        font-size: 0.85rem;
+        margin: 0;
+        font-weight: 700;
+      }
+      .delivery_item {
+        padding: 20px 10px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+        width: calc(25% - 8px);
+      }
+    }
+  }
+}

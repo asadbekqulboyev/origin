@@ -1,0 +1,15 @@
+.additional {
+  padding: 80px 0;
+  &_items {
+    gap: 16px 0;
+    margin-top: 24px;
+  }
+  &_item {
+    width: calc(33.33% - 8px);
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  }
+}

@@ -13,6 +13,12 @@
 @import "_header.scss";
 @import "_hero.scss";
 @import "_products.scss";
+@import "_trusted_clients.scss";
+@import "_additional.scss";
+@import "_delivery.scss";
+@import "_certificates.scss";
+@import "_contact.scss";
+@import "footer.scss";
 *,
 h2,
 h3,
@@ -120,6 +126,18 @@ main {
       margin-top: 4px;
     }
   }
-
-  
+  .btn {
+    color: #b71c1c;
+    font-family: "PT Sans";
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #e53935;
+    border: 0;
+    &:first-child {
+      gap: 8px;
+      flex: 1 0 0;
+      background: #fbe1e0;
+    }
+  }
 }

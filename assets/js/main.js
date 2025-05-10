@@ -64,4 +64,35 @@ $(document).ready(function () {
       },
     },
   });
+
+  const sertficatesSlide = new Swiper(".sertficates_slide", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  const totalSlides = sertficatesSlide.slides.length;
+  $("#slide-counter").text(`01/${totalSlides.toString().padStart(2, "0")}`);
+
+  sertficatesSlide.on("slideChange", function () {
+    const currentSlide = sertficatesSlide.activeIndex + 1;
+    $("#slide-counter").text(
+      `${currentSlide.toString().padStart(2, "0")}/${totalSlides
+        .toString()
+        .padStart(2, "0")}`
+    );
+  });
+
+  $("#download-btn").on("click", function () {
+    const activeSlide = $(
+      sertficatesSlide.slides[sertficatesSlide.activeIndex]
+    );
+    const pdfUrl = activeSlide.attr("data-pdf");
+    if (pdfUrl) {
+      window.location.href = pdfUrl;
+    }
+  });
 });
