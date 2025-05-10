@@ -754,6 +754,19 @@
 .footer .footer__contacts {
   gap: 24px;
 }
+.footer__social {
+  margin-top: 20px;
+}
+.footer__social a {
+  width: 24px;
+  height: 24px;
+  background: #3390ec;
+  border-radius: 4px;
+}
+.footer__social a:last-child {
+  margin-right: 0;
+  background: #33cf6a;
+}
 
 *,
 h2,
