@@ -1,0 +1,132 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+  &__top {
+    background: #fafafa;
+    & > span {
+      font-size: 14px;
+      color: #212121;
+    }
+    &_contacts {
+      gap: 40px;
+      a {
+        font-family: "PT Sans";
+        font-size: 14px;
+        color: #212121;
+      }
+    }
+    &_social {
+      a {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background: #3390ec;
+        &:last-child {
+          background: #33cf6a;
+        }
+      }
+    }
+  }
+  &__logo {
+    flex: 1;
+    h2 {
+      text-transform: uppercase;
+      color: #212121;
+      line-height: 80%;
+    }
+    span {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      color: #212121;
+    }
+  }
+  .nav-item {
+    padding: 0;
+
+    .nav-link {
+      text-transform: uppercase;
+      padding: 0;
+      color: #212121;
+      @media (max-width: 1200px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &__nav {
+    gap: 40px;
+
+    @media (max-width: 1400px) {
+      gap: 20px;
+    }
+    @media (max-width: 1200px) {
+      gap: 15px;
+    }
+    .navbar {
+      padding: 0;
+    }
+  }
+  &__form {
+    .catalog {
+      padding: 12px 20px;
+      border-radius: 4px;
+      background: #e53935;
+      color: #fafafa;
+      text-transform: uppercase;
+      flex: 1;
+    }
+    .form__content {
+      width: 75%;
+      .form_btn {
+        color: #212121;
+        transition: all 0.2s linear;
+        padding: 11.5px 20px;
+        border-radius: 4px;
+        border: 1px solid #e53935;
+        flex: 0 0 auto;
+        &:hover {
+          color: #e53935;
+        }
+      }
+    }
+    .form__search {
+      position: relative;
+      width: 47%;
+      input {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 11.5px 40px 11.5px 20px;
+      }
+      button {
+        background: #fff;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        height: 90%;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+      }
+    }
+    .form_link {
+      font-family: "PT Sans";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      color: #212121;
+      transition: all 0.2s linear;
+      &:hover {
+        color: #e53935;
+      }
+    }
+  }
+}

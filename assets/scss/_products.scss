@@ -1,0 +1,14 @@
+.products {
+  padding: 40px 0;
+  background: #f5f5f5;
+  margin-top: 80px;
+  &_top {
+    gap: 40px;
+    &_link.active {
+      border-bottom: 2px solid #e53935;
+    }
+  }
+  &_cards {
+    margin-top: 24px;
+  }
+}

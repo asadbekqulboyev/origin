@@ -1,0 +1,125 @@
+@import "../libs/bootstrap.min.css";
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT_Sans/PTSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT_Sans/PTSans-Regular.ttf") format("truetype");
+}
+// sections
+@import "_header.scss";
+@import "_hero.scss";
+@import "_products.scss";
+*,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "PT Sans";
+  color: #212121;
+  font-family: "PT Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: #fff;
+}
+
+.nav-link.dropdown-toggle::after {
+  display: none !important;
+}
+main {
+  padding-top: 152px;
+}
+.wrapper {
+  overflow: hidden;
+}
+.section_title {
+  font-family: "PT Sans";
+  color: #212121;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.products_card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  .products_card_top {
+    position: relative;
+    .tags {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      border-radius: 4px;
+      background: #91c031;
+      color: #fff;
+      font-family: "PT Sans";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 16.5px;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .product_card_body {
+    padding: 4px;
+
+    h3 {
+      color: #212121;
+      font-family: "PT Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    ul {
+      li {
+        padding: 7px 0;
+        span {
+          color: #999;
+          font-family: "PT Sans";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          &:last-child {
+            color: #212121;
+          }
+        }
+      }
+    }
+    .price_new {
+      color: #212121;
+      font-family: "PT Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 5px 0;
+      margin-top: 4px;
+    }
+  }
+
+  
+}

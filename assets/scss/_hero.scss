@@ -1,0 +1,232 @@
+.hero {
+  &__top {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    height: fit-content;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  }
+  &__left_slider {
+    width: 30%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    .swiper-pagination {
+      width: 100%;
+    }
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #e53935;
+      margin: 0 5px !important;
+    }
+  }
+  &_slider {
+    overflow: hidden;
+    width: 70%;
+    .swiper-slide {
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &_content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 60px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(4px);
+      .hero_text {
+        margin-bottom: 20px;
+        margin-top: 12px;
+      }
+      h2 {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+      }
+      .btn {
+        min-width: 138px;
+        padding: 11.5px 20px;
+        background: #000;
+        border-radius: 4px;
+        background: #e53935;
+        border: 0;
+        &:last-child {
+          background: #fbe1e0;
+          color: #e53935;
+        }
+      }
+    }
+  }
+  &__content {
+    width: 74.7%;
+  }
+  .sidebar {
+    width: 23.7%;
+
+    .catalog {
+      border-radius: 4px;
+      background: #fafafa;
+      padding: 11.5px 20px;
+      color: #212121;
+      height: 40px;
+      img {
+        opacity: 0;
+        transition: all 0.2s linear;
+      }
+      &:hover {
+        color: #e53935;
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  //   hero
+  &_cards {
+    margin-top: 24px;
+    overflow: hidden;
+    .swiper_btnlists {
+      gap: 31px;
+      margin-top: 8px;
+
+      .btn {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        box-shadow: 0 0 0 #fff;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .hero_card_top {
+      gap: 12px;
+    }
+    .hero_card_number {
+      color: #999;
+    }
+    .hero_card_title {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    .hero_card_info {
+      margin-top: 12px;
+    }
+  }
+  &_form {
+    padding: 16px;
+    border-radius: 4px;
+    background: #fafafa;
+    margin-top: 16px;
+    .filter_form {
+      label {
+        gap: 4px;
+        width: 12%;
+        @media (max-width: 1400px) {
+          width: 25%;
+        }
+        @media (max-width: 992px) {
+          width: 45%;
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        &.slects {
+          width: 35%;
+          .select2-container--default
+            .select2-selection--single
+            .select2-selection__arrow {
+            background: none;
+            width: 30px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            position: absolute;
+
+            // Hide default arrow <b> tag
+            b {
+              display: none;
+            }
+
+            // Insert custom SVG
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 23px;
+              height: 24px;
+              transform: translate(-50%, -50%);
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='24' viewBox='0 0 23 24' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.46052 8.52461C5.82667 8.15846 6.42032 8.15846 6.78647 8.52461L11.749 13.4871L16.7115 8.52461C17.0777 8.15846 17.6713 8.15846 18.0375 8.52461C18.4036 8.89076 18.4036 9.48441 18.0375 9.85055L12.412 15.4761C12.0458 15.8422 11.4522 15.8422 11.086 15.4761L5.46052 9.85055C5.09438 9.48441 5.09438 8.89076 5.46052 8.52461Z' fill='%23999999'/%3E%3C/svg%3E");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+      .select2-search--dropdown {
+        display: none;
+      }
+      .filter__input,
+      .select2-container .select2-selection--single {
+        height: 44px;
+        border-radius: 4px;
+        border: 1px solid #999;
+        width: 100%;
+      }
+      .select2-selection__rendered {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .select2 {
+        width: 100% !important;
+      }
+
+      .select2-search.select2-search--dropdown {
+        display: none;
+      }
+
+      .hero_form_btnlists {
+        width: 25%;
+        gap: 8px;
+        @media (max-width: 1200px) {
+          width: 45%;
+        }
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        .btn {
+          width: 50%;
+          padding: 11.5px 20px;
+          border-radius: 4px;
+          background: #e53935;
+          border: 0;
+          color: #fff;
+          &:last-child {
+            background: #fbe1e0;
+            color: #e53935;
+          }
+        }
+      }
+    }
+  }
+}
