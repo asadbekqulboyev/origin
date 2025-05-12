@@ -4,27 +4,52 @@
   left: 0;
   width: 100%;
   background: #fff;
-  z-index: 10;
+  z-index: 100;
   &__top {
     background: #fafafa;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      padding: 8px;
+    }
+
     & > span {
       font-size: 14px;
       color: #212121;
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
     &_contacts {
       gap: 40px;
+      @media (max-width: 992px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+      }
       a {
         font-family: "PT Sans";
         font-size: 14px;
         color: #212121;
+        @media (max-width: 992px) {
+          height: 40px;
+        }
       }
     }
     &_social {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+      }
       a {
         width: 24px;
         height: 24px;
         border-radius: 4px;
         background: #3390ec;
+        @media (max-width: 768px) {
+          width: 100%;
+          color: #fff;
+          height: 40px;
+        }
         &:last-child {
           background: #33cf6a;
         }
@@ -78,9 +103,16 @@
       color: #fafafa;
       text-transform: uppercase;
       flex: 1;
+      @media (max-width: 992px) {
+        height: fit-content;
+      }
     }
     .form__content {
       width: 75%;
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       .form_btn {
         color: #212121;
         transition: all 0.2s linear;
@@ -88,6 +120,7 @@
         border-radius: 4px;
         border: 1px solid #e53935;
         flex: 0 0 auto;
+
         &:hover {
           color: #e53935;
         }
@@ -126,6 +159,66 @@
       transition: all 0.2s linear;
       &:hover {
         color: #e53935;
+      }
+    }
+  }
+
+  &_mobile {
+    display: none;
+    position: fixed;
+    top: 12px;
+    z-index: 222222;
+    left: 0;
+    padding: 0;
+    &_content {
+      width: 100%;
+      max-width: 269px;
+      border-radius: 0px 4px 4px 0px;
+      background: #fff;
+      .dorpdown_content {
+        .catalog {
+          border-radius: 4px;
+          background: #fafafa;
+          padding: 11.5px 20px;
+          color: #212121;
+          height: 40px;
+          img {
+            opacity: 0;
+            transition: all 0.2s linear;
+          }
+          &:hover {
+            color: #e53935;
+            img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .form_btn {
+        color: #212121;
+        transition: all 0.2s linear;
+        padding: 11.5px 20px;
+        border-radius: 4px;
+        border: 1px solid #e53935;
+        flex: 0 0 auto;
+
+        &:hover {
+          color: #e53935;
+        }
+      }
+      .header_mobile_list {
+        a {
+          height: 40px;
+          color: #212121;
+          font-family: "PT Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .dorpdown_content {
+        display: none;
       }
     }
   }

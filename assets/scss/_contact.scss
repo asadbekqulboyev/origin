@@ -1,9 +1,15 @@
 .contact {
   .container {
     gap: 16px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
   }
   &__image {
     position: relative;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
@@ -29,6 +35,9 @@
 
   &__form {
     flex: 1;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
     form {
       height: 100%;
       width: 100%;

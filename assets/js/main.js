@@ -95,4 +95,24 @@ $(document).ready(function () {
       window.location.href = pdfUrl;
     }
   });
+  Fancybox.bind("[data-fancybox]", {
+    trapFocus: true,
+    placeFocusBack: true,
+    autoFocus: false,
+    dragToClose: false,
+  });
+  // sidebar_toggle
+  $(".dropdown_mobile").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+    $(this).next(".dorpdown_content").sldeToggle();
+  });
+
+  // Применяем маску для российского номера телефона
+  $("input[type='tel']").inputmask({
+    mask: "+7 (999) 999-99-99",
+    showMaskOnHover: false,
+    showMaskOnFocus: true,
+    clearIncomplete: true,
+  });
 });

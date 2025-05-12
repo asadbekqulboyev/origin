@@ -41,6 +41,10 @@
       padding: 60px;
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(4px);
+      @media (max-width: 1400px) {
+        padding: 25px;
+      }
+
       .hero_text {
         margin-bottom: 20px;
         margin-top: 12px;
@@ -66,27 +70,12 @@
   }
   &__content {
     width: 74.7%;
+    @media (max-width: 992px) {
+      width: 100%; 
+    }
   }
   .sidebar {
     width: 23.7%;
-
-    .catalog {
-      border-radius: 4px;
-      background: #fafafa;
-      padding: 11.5px 20px;
-      color: #212121;
-      height: 40px;
-      img {
-        opacity: 0;
-        transition: all 0.2s linear;
-      }
-      &:hover {
-        color: #e53935;
-        img {
-          opacity: 1;
-        }
-      }
-    }
   }
   //   hero
   &_cards {
@@ -148,6 +137,9 @@
         }
         &.slects {
           width: 35%;
+          @media (max-width:768px) {
+            width: 100%;
+          }
           .select2-container--default
             .select2-selection--single
             .select2-selection__arrow {
@@ -226,6 +218,26 @@
             color: #e53935;
           }
         }
+      }
+    }
+  }
+}
+
+.sidebar {
+  .catalog {
+    border-radius: 4px;
+    background: #fafafa;
+    padding: 11.5px 20px;
+    color: #212121;
+    height: 40px;
+    img {
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      color: #e53935;
+      img {
+        opacity: 1;
       }
     }
   }

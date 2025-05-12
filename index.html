@@ -23,14 +23,12 @@
         <header class="header">
           <div class="container">
             <!-- Top header -->
-            <div
-              class="header__top d-flex justify-content-between align-items-center"
-            >
+            <div class="header__top d-none d-lg-flex justify-content-between align-items-center" >
               <span
                 >Свяжитесь с нами удобным способом — ответим на все ваши
                 вопросы!</span
               >
-              <div class="header__top_contacts d-flex align-items-center pt-2 pb-2">
+              <div class="header__top_contacts d-none align-items-center pt-2 pb-2 d-md-flex">
                 <a href="tel:+74951832333" class="d-flex align-items-center gap-1">
                   <img src="assets/images/tel.svg" alt="" />
                   <span>+7 495 183-23-33</span>
@@ -45,14 +43,16 @@
                 <div class="header__top_social d-flex align-items-center gap-1">
                   <a
                     href="#"
-                    class="d-flex align-items-center gap-1 justify-content-center"
+                    class="d-flex align-items-center gap-1 justify-content-center "
                     ><img src="assets/images/telegram_top.svg" alt=""
-                  /></a>
+                  />
+                <span class="d-md-none">Напишите в чат</span></a>
                   <a
                     href="#"
-                    class="d-flex align-items-center gap-1 justify-content-center"
+                    class="d-flex align-items-center gap-1 justify-content-center "
                     ><img src="assets/images/whatsap_top.svg" alt=""
-                  /></a>
+                  />
+                <span class="d-md-none">Напишите в чат</span></a>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
             </div>
             <form action="#" class="header__form d-flex justify-content-between gap-3
              ">
-                <a href="" class="catalog d-flex align-items-center gap-2">
+                <a href="" class="catalog d-lg-flex d-none align-items-center gap-2">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8335 4.99984C5.8335 4.5396 6.20659 4.1665 6.66683 4.1665H17.5002C17.9604 4.1665 18.3335 4.5396 18.3335 4.99984C18.3335 5.46007 17.9604 5.83317 17.5002 5.83317H6.66683C6.20659 5.83317 5.8335 5.46007 5.8335 4.99984Z" fill="#FAFAFA"/>
@@ -119,6 +119,10 @@
                         Каталог
                     </span>
                 </a>
+                <a data-fancybox data-src="#mobileMenu" class="catalog  d-lg-none d-flex align-items-center w-fit">
+                    <img src="assets/images/burger.svg" alt="">
+                </a>
+                
                 <div class="form__content d-flex align-items-center  gap-3">
                     <label class="form__search">
                         <input type="text" placeholder="Найти товар">
@@ -126,11 +130,11 @@
                             <img src="assets/images/search.svg" alt="">
                         </button>
                     </label>
-                    <a href="#" class="d-flex align-items-center gap-2 form_btn">
+                    <a href="#" class=" d-none d-lg-flex align-items-center gap-2 form_btn">
                         <span>Запросить расчет</span>
                         <img src="assets/images/calculator.svg" alt="">
                     </a>
-                    <a href="#" class="d-flex align-items-center gap-2 form_btn">
+                    <a href="#" class=" d-none d-lg-flex align-items-center gap-2 form_btn">
                         <span>Заказать звонок</span>
                         <img src="assets/images/order-call.svg" alt="">
                     </a>
@@ -155,6 +159,205 @@
                     </a>
                 </div>
             </form>
+        
+           </div>
+           <div class="header_mobile " id="mobileMenu">
+            <div class="header_mobile_content p-3">
+                <div class="header_mobile_top d-flex justify-content-between align-items-center">
+                    <h4>Меню</h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4716 3.52876C12.7319 3.78911 12.7319 4.21122 12.4716 4.47157L4.47157 12.4716C4.21122 12.7319 3.78911 12.7319 3.52876 12.4716C3.26841 12.2112 3.26841 11.7891 3.52876 11.5288L11.5288 3.52876C11.7891 3.26841 12.2112 3.26841 12.4716 3.52876Z" fill="#212121"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52876 3.52876C3.78911 3.26841 4.21122 3.26841 4.47157 3.52876L12.4716 11.5288C12.7319 11.7891 12.7319 12.2112 12.4716 12.4716C12.2112 12.7319 11.7891 12.7319 11.5288 12.4716L3.52876 4.47157C3.26841 4.21122 3.26841 3.78911 3.52876 3.52876Z" fill="#212121"/>
+                        </svg>
+                </div>
+                <ul class="header_mobile_list p-0 ">
+                    <li>
+                        <a href="#" class="header_mobile_link dropdown_mobile d-flex align-items-center justify-content-between">
+                            <span>О компании</span>
+                            <img src="assets/images/arrow_right.svg" alt="">
+                        </a>
+                        <div class="dorpdown_content">
+                            <ul class="sidebar__list d-flex flex-column gap-1 p-0">
+                                <li>
+                                    <a href="#" class="catalog d-flex align-items-center justify-content-between" >Kомпании 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="catalog d-flex align-items-center justify-content-between" >Kомпании 1</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link dropdown_mobile  d-flex align-items-center justify-content-between">
+                            <span>Каталог</span>
+                            <img src="assets/images/arrow_right.svg" alt="">
+                        </a>
+                        <div class="dorpdown_content ">
+                            <ul class="sidebar__list d-flex flex-column gap-1 p-0">
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Болты</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Винты</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Гайки</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Заклепки</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Кольца стопорные</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Кольца стопорные</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Саморезы</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Хомуты, скобы и стяжки</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Шайбы</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Шпильки резьбовые</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Шплинты</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between">
+                                        <span>Шпонки</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
+                                        <span>Шурупы</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
+                                        <span>Штифты</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
+                                        <span>Приварной крепёж</span>
+                                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
+                                    </a>
+                                </li>
+                                </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Производство</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Услуги</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Оплата и доставка</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Вакансии</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Поставщикам</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="header_mobile_link  d-flex align-items-center justify-content-between">
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <div class="header__top d-flex justify-content-between align-items-center p-0 bg-white" >
+                    <div class="header__top_contacts d-flex align-items-center ">
+                        <a href="#" class="d-flex align-items-center gap-2 form_btn w-100 justify-content-center bg-white">
+                            <span>Запросить расчет</span>
+                            <img src="assets/images/calculator.svg" alt="">
+                        </a>
+                        <a href="#" class="d-flex align-items-center gap-2 form_btn w-100 justify-content-center bg-white">
+                            <span>Заказать звонок</span>
+                            <img src="assets/images/order-call.svg" alt="">
+                        </a>
+                      <a href="tel:+74951832333" class="d-flex align-items-center gap-1">
+                        <img src="assets/images/tel.svg" alt="" />
+                        <span>+7 495 183-23-33</span>
+                      </a>
+                      <a
+                        href="mailto:info@originkrepeg.ru"
+                        class="d-flex align-items-center gap-1"
+                      >
+                        <img src="assets/images/mail.svg" alt="" />
+                        <span>info@originkrepeg.ru</span>
+                      </a>
+                      <div class="header__top_social d-flex align-items-center gap-1">
+                        <a
+                          href="#"
+                          class="d-flex align-items-center gap-1 justify-content-center "
+                          ><img src="assets/images/telegram_top.svg" alt=""
+                        />
+                      <span class="d-md-none">Напишите в чат</span></a>
+                        <a
+                          href="#"
+                          class="d-flex align-items-center gap-1 justify-content-center "
+                          ><img src="assets/images/whatsap_top.svg" alt=""
+                        />
+                      <span class="d-md-none">Напишите в чат</span></a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+           </div>
         </header>
         <!-- main -->
         <main>
@@ -162,7 +365,7 @@
         <section class="hero">
             <div class="container d-flex jusctify-content-between gap-3">
             <!-- Hero sidebar   -->
-            <div class="sidebar">
+            <div class="sidebar d-lg-block d-none ">
                 <!-- Sidebar content -->  
                 <ul class="sidebar__list d-flex flex-column gap-1 p-0">
                 <li>
@@ -839,7 +1042,7 @@
                     </div>
                     
                 </div>
-                <div class="trusted_clients_info d-flex ">
+                <div class="trusted_clients_info d-md-flex d-none ">
                     <img src="assets/images/trusted_client.png" alt="">
                     <div class="trusted_clients_info_content">
                         <h4 class="trusted_clients_info_title">Энергия — ведущий разработчик аэрокосмических систем</h4>
@@ -1125,7 +1328,7 @@
                     <p>Мы используем современные технологии производства, включая автоматизированные линии, качественные марки стали и контроль на каждом этапе изготовления.</p>
                     <p>Сотрудничая с различными предприятиями, предоставляем выгодные условия поставки. Готовы предложить гибкие объемы закупок, бесплатную отгрузку и консультации по подбору крепежа.</p>
                     </div>
-                    <div class="sertficates_content d-flex flex-column">
+                    <div class="sertficates_content d-flex flex-column justify-content-center">
                         <div class="swiper sertficates_slide">
                             <div class="swiper-wrapper">
                             <div class="swiper-slide" data-pdf="assets/files/sertficate1.pdf">
@@ -1272,23 +1475,25 @@
                         </div>
                     </div>
     
-                    <div class="col-lg-4 col-md-6 footer__section">
-                        <h5 class="footer__title">Каталог</h5>
+                    <div class="col-lg-4 col-md-6 footer__section d-flex flex-column justify-content-between">
                         <ul class="footer__list list-unstyled d-flex flex-column">
+                            <li>
+                            <h5 class="footer__title">Каталог</h5>
+                            </li>                            
                             <li><a href="#">Болты</a></li>
                             <li><a href="#">Винты</a></li>
                             <li><a href="#">Гайки</a></li>
                             <li><a href="#">Шайбы</a></li>
                         </ul>
-                        <div class="footer__contacts">
+                        <div class="footer__contacts d-flex flex-column">
                         <a href="tel:+74951832333" class="d-flex align-items-center">
                             <img src="assets/images/tel.svg" alt="">
                             <span>+7 495 183-23-33</span>
                         </a>
-                            <a href="mailto:info@originkrepeg.ru" class="d-flex align-items-center mail">
-                                <img src="assets/images/mail.svg" alt="">
-                                <span>info@originkrepeg.ru</span>
-                            </a>
+                        <a href="mailto:info@originkrepeg.ru" class="d-flex align-items-center mail">
+                             <img src="assets/images/mail.svg" alt="">
+                             <span>info@originkrepeg.ru</span>
+                        </a>
                             <div class="footer__social d-flex gap-2">
                                 <a href="#" class="d-flex align-items-center justify-content-center">
                                     <img src="assets/images/telegram_top.svg" class="d-flex align-items-center justify-content-center" alt="">
@@ -1301,15 +1506,32 @@
                     </div>
     
                     <div class="col-lg-4 col-md-6 footer__section">
-                        <h5 class="footer__title">Меню</h5>
-                        <ul class="footer__list list-unstyled">
-                            <li>О КОМПАНИИ</li>
-                            <li>ПРОИЗВОДСТВО</li>
-                            <li>УСЛУГИ</li>
-                            <li>ОПЛАТА И ДОСТАВКА</li>
-                            <li>ВАКАНСИИ</li>
-                            <li>ПОСТАВЩИКАМ</li>
-                            <li>КОНТАКТЫ</li>
+                        
+                        <ul class="footer__list list-unstyled d-flex flex-column">
+                            <li>
+                                <h5 class="footer__title">Меню</h5>
+                            </li>
+                            <li><a href="#">
+                                О КОМПАНИИ
+                            </a> </li>
+                            <li><a href="#">
+                                ПРОИЗВОДСТВО
+                            </a> </li>
+                            <li><a href="#">
+                                УСЛУГИ
+                            </a> </li>
+                            <li><a href="#">
+                                ОПЛАТА И ДОСТАВКА
+                            </a> </li>
+                            <li><a href="#">
+                                ВАКАНСИИ
+                            </a> </li>
+                            <li><a href="#">
+                                ПОСТАВЩИКАМ
+                            </a> </li>
+                            <li><a href="#">
+                                КОНТАКТЫ
+                            </a> </li>
                         </ul>
                     </div>
                 </div>
@@ -1337,6 +1559,7 @@
 
     <!-- jQuery -->
     <script src="assets/libs/jquery-3.7.1.min.js"></script>
+    <script src="assets/libs/jquery.inputmask.min.js"></script>
     <!-- Bootstrap Bundle JS (для tooltip, tabs и пр.) -->
     <script src="assets/libs/bootstrap.min.js"></script>
     <!-- Fancybox -->
