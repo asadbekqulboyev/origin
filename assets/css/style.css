@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../libs/bootstrap.min.css";
 @font-face {
   font-family: "PT Sans";
@@ -14,6 +15,7 @@
   width: 100%;
   background: #fff;
   z-index: 100;
+  transition: all 0.2s linear;
 }
 .header__top {
   background: #fafafa;
@@ -77,6 +79,7 @@
 }
 .header__logo {
   flex: 1;
+  transition: all 0.2s linear;
 }
 .header__logo h2 {
   text-transform: uppercase;
@@ -117,6 +120,20 @@
 }
 .header__nav .navbar {
   padding: 0;
+}
+.header__form .header__logo {
+  display: none !important;
+}
+.header__form .header__logo h2 {
+  text-transform: uppercase;
+  color: #212121;
+  line-height: 80%;
+}
+.header__form .header__logo span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  color: #212121;
 }
 .header__form .catalog {
   padding: 12px 20px;
@@ -169,7 +186,7 @@
   position: absolute;
   top: 50%;
   height: 90%;
-  right: 20px;
+  right: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,6 +199,15 @@
   font-weight: 700;
   color: #212121;
   transition: all 0.2s linear;
+}
+.header__form .form_link .count_product {
+  width: 16px;
+  height: 17px;
+  border-radius: 100px;
+  background: #e53935;
+  color: #fafafa;
+  right: 10px;
+  top: 0;
 }
 .header__form .form_link:hover {
   color: #e53935;
@@ -240,6 +266,136 @@
 .header_mobile_content .dorpdown_content {
   display: none;
 }
+.header__hamburger {
+  display: none;
+}
+.header.scroll {
+  animation: fadeIn 0.4s linear;
+  padding: 18px 0;
+}
+.header.scroll .scroll_none {
+  display: none !important;
+}
+.header.scroll .header__form {
+  align-items: center;
+  justify-content: space-between;
+}
+.header.scroll .header__nav {
+  flex-direction: column;
+}
+.header.scroll .navbar .header__nav {
+  padding: 20px;
+  margin-left: auto;
+  position: relative;
+  z-index: 11111111111111112;
+  background: #fff;
+}
+.header.scroll #header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.header.scroll #header__nav .header__nav {
+  flex-direction: column !important;
+}
+.header.scroll .catalog {
+  width: 100%;
+  max-width: 211px;
+  flex: 0 0 auto;
+  margin-left: 20px;
+}
+@media (max-width: 1400px) {
+  .header.scroll .catalog {
+    margin-left: 0;
+    max-width: 140px;
+  }
+}
+.header.scroll .header__logo {
+  display: flex !important;
+  flex: 0 0 auto;
+}
+.header.scroll .header__top {
+  display: none;
+}
+.header.scroll .form__search {
+  position: relative;
+  width: 44px;
+}
+.header.scroll .form__search input {
+  width: 100%;
+  width: 44px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 11.5px 0px 11.5px 0px;
+}
+.header.scroll .form__search button {
+  background: #fff;
+  width: 42px;
+  cursor: pointer;
+  right: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+.header.scroll .header__top_contacts {
+  flex-direction: column;
+  margin-left: 29px;
+}
+@media (max-width: 1400px) {
+  .header.scroll .header__top_contacts {
+    margin-left: 0;
+  }
+}
+.header.scroll .form_link {
+  margin-left: 20px;
+}
+@media (max-width: 1400px) {
+  .header.scroll .form_link {
+    margin-left: 0;
+  }
+}
+.header.scroll .header__hamburger {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: #f5f5f5;
+  gap: 4px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.header.scroll .header__hamburger span {
+  width: 20px;
+  height: 2px;
+  background: #212121;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fancybox__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.fancybox__content .header__nav {
+  gap: 32px;
+  flex-direction: column !important;
+}
+.fancybox__content .header__nav a {
+  padding: 0 !important;
+}
 
 .hero__top {
   width: 100%;
@@ -265,9 +421,14 @@
   background: #e53935;
   margin: 0 5px !important;
 }
+.hero__banner {
+  position: relative;
+}
+.hero__banner_item {
+  height: 100%;
+}
 .hero_slider {
   overflow: hidden;
-  width: 70%;
 }
 .hero_slider .swiper-slide {
   position: relative;
@@ -984,13 +1145,70 @@
   background: #33cf6a;
 }
 
+.breadcrumb-nav a {
+  color: #999;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 *,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /* Шрифты */
+  --font-fmily: "PT Sans", sans-serif;
+  /* Размеры заголовков */
+  --font-size-h1: 36px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  /* Цвета кнопок */
+  --btn-bg: #e53935;
+  --btn-bg-opacity: #fbe1e0;
+  --btn-text-color: #ffffff;
+  --btn-hover-bg: #0056b3;
+  --btn-hover-text: #ffffff;
+}
+
+/* Применение переменных */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
 }
 
 li,
@@ -1005,9 +1223,8 @@ a {
 }
 
 body {
-  font-family: "PT Sans";
   color: #212121;
-  font-family: "PT Sans";
+  font-family: var(--font-fmily);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1033,11 +1250,16 @@ main {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
+  gap: 16px;
 }
 @media (max-width: 768px) {
   .section_title {
     font-size: 20px;
   }
+}
+.section_title span {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .products_card {
@@ -1122,4 +1344,11 @@ main {
 
 .fancybox__backdrop {
   background: rgba(33, 33, 33, 0.3);
+}
+
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  border-color: #212121 !important;
+  box-shadow: 0 0 0 transparent;
 }/*# sourceMappingURL=style.css.map */

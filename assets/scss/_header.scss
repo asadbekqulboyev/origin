@@ -5,6 +5,8 @@
   width: 100%;
   background: #fff;
   z-index: 100;
+  transition: all 0.2s linear;
+
   &__top {
     background: #fafafa;
     @media (max-width: 992px) {
@@ -58,6 +60,7 @@
   }
   &__logo {
     flex: 1;
+    transition: all 0.2s linear;
     h2 {
       text-transform: uppercase;
       color: #212121;
@@ -72,7 +75,6 @@
   }
   .nav-item {
     padding: 0;
-
     .nav-link {
       text-transform: uppercase;
       padding: 0;
@@ -84,7 +86,6 @@
   }
   &__nav {
     gap: 40px;
-
     @media (max-width: 1400px) {
       gap: 20px;
     }
@@ -96,6 +97,20 @@
     }
   }
   &__form {
+    .header__logo {
+      display: none !important;
+      h2 {
+        text-transform: uppercase;
+        color: #212121;
+        line-height: 80%;
+      }
+      span {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        color: #212121;
+      }
+    }
     .catalog {
       padding: 12px 20px;
       border-radius: 4px;
@@ -143,7 +158,7 @@
         position: absolute;
         top: 50%;
         height: 90%;
-        right: 20px;
+        right: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -157,6 +172,15 @@
       font-weight: 700;
       color: #212121;
       transition: all 0.2s linear;
+      .count_product {
+        width: 16px;
+        height: 17px;
+        border-radius: 100px;
+        background: #e53935;
+        color: #fafafa;
+        right: 10px;
+        top: 0;
+      }
       &:hover {
         color: #e53935;
       }
@@ -220,6 +244,134 @@
       .dorpdown_content {
         display: none;
       }
+    }
+  }
+  &__hamburger {
+    display: none;
+  }
+  &.scroll {
+    animation: fadeIn 0.4s linear;
+    padding: 18px 0;
+    .scroll_none {
+      display: none !important;
+    }
+    .header__form {
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header__nav {
+      flex-direction: column;
+    }
+    .navbar {
+      .header__nav {
+        padding: 20px;
+        margin-left: auto;
+        position: relative;
+        z-index: 11111111111111111;
+        background: #fff;
+      }
+    }
+
+    #header__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: none;
+
+      .header__nav {
+        flex-direction: column !important;
+      }
+    }
+    .catalog {
+      width: 100%;
+      max-width: 211px;
+      flex: 0 0 auto;
+      margin-left: 20px;
+      @media (max-width: 1400px) {
+        margin-left: 0;
+        max-width: 140px;
+      }
+    }
+    .header__logo {
+      display: flex !important;
+      flex: 0 0 auto;
+    }
+    .header__top {
+      display: none;
+    }
+    .form__search {
+      position: relative;
+      width: 44px;
+      input {
+        width: 100%;
+        width: 44px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 11.5px 0px 11.5px 0px;
+      }
+      button {
+        background: #fff;
+        width: 42px;
+        cursor: pointer;
+        right: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-50%);
+      }
+    }
+    .header__top_contacts {
+      flex-direction: column;
+      margin-left: 29px;
+      @media (max-width: 1400px) {
+        margin-left: 0;
+      }
+    }
+    .form_link {
+      margin-left: 20px;
+      @media (max-width: 1400px) {
+        margin-left: 0;
+      }
+    }
+    .header__hamburger {
+      display: flex;
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background: #f5f5f5;
+      gap: 4px;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      span {
+        width: 20px;
+        height: 2px;
+        background: #212121;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fancybox__content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  .header__nav {
+    gap: 32px;
+    flex-direction: column !important;
+    a {
+      padding: 0 !important;
     }
   }
 }

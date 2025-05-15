@@ -5,6 +5,7 @@
     border-radius: 4px;
     height: fit-content;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+
   }
   &__left_slider {
     width: 30%;
@@ -23,9 +24,17 @@
       margin: 0 5px !important;
     }
   }
+  &__banner {
+    position: relative;
+    &_item {
+      height: 100%;
+    }
+  }
+  &__slider_content{
+    
+  }
   &_slider {
     overflow: hidden;
-    width: 70%;
     .swiper-slide {
       position: relative;
       img {
@@ -71,7 +80,7 @@
   &__content {
     width: 74.7%;
     @media (max-width: 992px) {
-      width: 100%; 
+      width: 100%;
     }
   }
   .sidebar {
@@ -137,7 +146,7 @@
         }
         &.slects {
           width: 35%;
-          @media (max-width:768px) {
+          @media (max-width: 768px) {
             width: 100%;
           }
           .select2-container--default

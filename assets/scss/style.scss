@@ -19,14 +19,65 @@
 @import "_certificates.scss";
 @import "_contact.scss";
 @import "footer.scss";
+@import "breadcrumb.scss";
 *,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  /* Шрифты */
+  --font-fmily: "PT Sans", sans-serif;
+  /* Размеры заголовков */
+  --font-size-h1: 36px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+
+  /* Цвета кнопок */
+  --btn-bg: #e53935;
+  --btn-bg-opacity: #fbe1e0;
+  --btn-text-color: #ffffff;
+  --btn-hover-bg: #0056b3;
+  --btn-hover-text: #ffffff;
+}
+
+/* Применение переменных */
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
 li,
 ul {
   list-style: none;
@@ -37,9 +88,8 @@ a {
   text-decoration: none;
 }
 body {
-  font-family: "PT Sans";
   color: #212121;
-  font-family: "PT Sans";
+  font-family: var(--font-fmily);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -62,8 +112,13 @@ main {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
+  gap: 16px;
   @media (max-width: 768px) {
     font-size: 20px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 .products_card {
@@ -149,4 +204,10 @@ main {
 }
 .fancybox__backdrop {
   background: rgba(33, 33, 33, 0.3);
+}
+input.form-control:focus,
+select.form-control:focus,
+textarea.form-control:focus {
+  border-color: #212121 !important;
+  box-shadow: 0 0 0 transparent;
 }

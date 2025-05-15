@@ -1,6 +1,11 @@
 $(document).ready(function () {
-  // header
-
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 10) {
+      $(".header").addClass("scroll");
+    } else {
+      $(".header").removeClass("scroll");
+    }
+  });
   // hero slider
   const hero_left_slide = new Swiper(".hero__left_slider", {
     loop: true,

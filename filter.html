@@ -20,7 +20,7 @@
   <body>
     <div class="wrapper">
         <!-- Header -->
-        <header class="header scroll">
+        <header class="header">
             <!-- Top header -->
             <div class="header__top " >
                 <div class="container d-none d-lg-flex justify-content-between align-items-center">
@@ -58,13 +58,15 @@
                 </div>
             </div>
           <div class="container">
-            <div class="header__wrap d-flex justify-content-between align-items-center pt-2 pb-2 scroll_none"
+            <div
+              class="header__wrap d-flex justify-content-between align-items-center pt-2 pb-2"
             >
+              <!-- logo, nav, contact, lang -->
               <a href="#" class="header__logo d-flex flex-column align-items-center ">
                 <h2>origin</h2>
                 <span>Интернет-магазин крепежа</span>
               </a>
-              <div class="header__nav " id="header__nav">
+              <div class="header__nav ">
                 <nav class="navbar navbar-expand-lg navbar-light">
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav header__nav">
@@ -102,13 +104,8 @@
                 </nav>
             </div>
             </div>
-            
             <form action="#" class="header__form d-flex justify-content-between gap-3
              ">
-             <a href="#" class="header__logo d-flex flex-column align-items-center ">
-                <h2>origin</h2>
-                <span>Интернет-магазин крепежа</span>
-              </a>
                 <a href="" class="catalog d-lg-flex d-none align-items-center gap-2">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -143,21 +140,8 @@
                         <span>Заказать звонок</span>
                         <img src="assets/images/order-call.svg" alt="">
                     </a>
-                    <div class="header__top_contacts ">
-                        <a href="tel:+74951832333" class="d-flex align-items-center gap-1">
-                          <img src="assets/images/tel.svg" alt="" />
-                          <span>+7 495 183-23-33</span>
-                        </a>
-                        <a
-                          href="mailto:info@originkrepeg.ru"
-                          class="d-flex align-items-center gap-1"
-                        >
-                          <img src="assets/images/mail.svg" alt="" />
-                          <span>info@originkrepeg.ru</span>
-                        </a>
-                      </div>
                     <a href="#" class="form_link d-flex align-items-center  flex-column position-relative">
-                        <span class="count_product position-absolute  d-flex align-items-center justify-content-center">0</span>
+                        <span class="count_product position-absolute  d-flex align-items-center justify-content-center    ">0</span>
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 27.3335C10.5 26.2289 11.3954 25.3335 12.5 25.3335C13.6046 25.3335 14.5 26.2289 14.5 27.3335C14.5 28.4381 13.6046 29.3335 12.5 29.3335C11.3954 29.3335 10.5 28.4381 10.5 27.3335Z" fill="#E53935"/>
@@ -177,13 +161,8 @@
                         <span>Войти</span>
                     </a>
                 </div>
-                <a data-fancybox data-src="#header__nav" class="header__hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
             </form>
-            
+        
            </div>
            <div class="header_mobile " id="mobileMenu">
             <div class="header_mobile_content p-3">
@@ -385,437 +364,43 @@
         </header>
         <!-- main -->
         <main>
-        <!-- Hero section -->
-        <section class="hero">
-            <div class="container d-flex jusctify-content-between gap-3">
-            <!-- Hero sidebar   -->
-            <div class="sidebar d-lg-block d-none ">
-                <!-- Sidebar content -->  
-                <ul class="sidebar__list d-flex flex-column gap-1 p-0">
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Болты</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Винты</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Гайки</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Заклепки</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Кольца стопорные</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Кольца стопорные</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Саморезы</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Хомуты, скобы и стяжки</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Шайбы</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Шпильки резьбовые</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Шплинты</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between">
-                        <span>Шпонки</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
-                        <span>Шурупы</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
-                        <span>Штифты</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="catalog d-flex align-items-center justify-content-between disable">
-                        <span>Приварной крепёж</span>
-                        <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
-                    </a>
-                </li>
-                </ul>
-            </div>
-            <div class="hero__content">
-                <!-- Hero content -->
-                <div class="hero__top d-flex hero_slider swiper">
-                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img data-src="assets/images/hero_slide0.png" alt="" class="lazy">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img data-src="assets/images/hero_slide2.png" alt="" class="lazy">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img src="assets/images/hero_slide3.png" alt="">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img src="assets/images/hero_slide4.png" alt="">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img src="assets/images/hero_slide5.png" alt="">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero__slider_content d-flex">
-                            <div class="swiper hero__left_slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="Screw" class="lazy" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                    </div>
-                                    <div class="swiper-slide">
-                                    <img data-src="assets/images/hero_img_left.png" alt="" class="lazy">
-                                   </div>
-                                </div>
-                                <div class="swiper-pagination d-flex align-items-center justify-content-center"></div>
-                            </div>
-                            <div class="hero__banner">
-                                <div class="hero__banner_item">
-                                    <img src="assets/images/hero_slide1.png" alt="">
-                                    <div class="hero_slider_content">
-                                        <h2 class="hero_title">
-                                            Микровинты с нестандартной шаговой резьбой
-                                        </h2>
-                                        <p class="hero_text">Подписи, объясняющие, почему этот товар уникален.</p>
-                                        <div class="hero_btns d-flex gap-3 align-items-center">
-                                            <a href="#" class="btn btn-danger">Заказать</a>
-                                            <a href="#" class="btn btn-primary">Подробнее</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-                </div>
-                <div class="swpier hero_cards">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="hero_card">
-                                <div class="hero_card_top d-flex align-items-start">
-                                    <img src="assets/images/hero_card1.svg" alt="">
-                                    <div class="hero_card_titles d-flex flex-column gap-px">
-                                        <span class="hero_card_number">01.</span>
-                                        <h3 class=" hero_card_title ">Всегда в наличии 
-                                            и готовы к отправке</h3>
-                                    </div>
-                                </div>
-                                <p class="hero_card_info">
-                                    90% типоразмеров крепежа от М1.6 до М6 на складе. Оперативная поставка без задержек.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero_card">
-                                <div class="hero_card_top d-flex align-items-start">
-                                    <img src="assets/images/hero_card2.svg" alt="">
-                                    <div class="hero_card_titles d-flex flex-column ">
-                                        <span class="hero_card_number">02.</span>
-                                        <h3 class=" hero_card_title ">Прямые цены от производителя</h3>
-                                    </div>
-                                </div>
-                                <p class="hero_card_info">Собственное производство и современные технологии позволяют снизить себестоимость.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero_card">
-                                <div class="hero_card_top d-flex align-items-start">
-                                    <img src="assets/images/hero_card3.svg" alt="">
-                                    <div class="hero_card_titles  d-flex flex-column ">
-                                        <span class="hero_card_number">03.</span>
-                                        <h3 class=" hero_card_title ">Гибкие условия сотрудничества</h3>
-                                    </div>
-                                </div>
-                                <p class="hero_card_info">Бесплатные образцы, гальваническое покрытие и выгодные условия для оптовиков.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero_card">
-                                <div class="hero_card_top d-flex align-items-start">
-                                    <img src="assets/images/hero_card4.svg" alt="">
-                                    <div class="hero_card_titles d-flex flex-column">
-                                        <span class="hero_card_number">04.</span>
-                                        <h3 class=" hero_card_title ">Дополнительные услуги</h3>
-                                    </div>
-                                </div>
-                                <p class="hero_card_info">Гальваническое покрытие, доработка и другие услуги под ваши задачи.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="hero_card">
-                                <div class="hero_card_top  d-flex align-items-start">
-                                    <img src="assets/images/hero_card5.svg" alt="">
-                                    <div class="hero_card_titles d-flex flex-column ">
-                                        <span class="hero_card_number">05.</span>
-                                        <h3 class=" hero_card_title ">Гарантированное качество</h3>
-                                    </div>
-                                </div>
-                                <p class="hero_card_info">Вся продукция сертифицирована и соответствует стандартам.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper_btnlists d-flex align-items-center justify-content-center gap-px">
-                        <div class="d-flex align-items-center justify-content-center btn button-next"> <img src="assets/images/chevron-left.svg" alt=""> </div>
-                        <div class="d-flex align-items-center justify-content-center btn button-prev"> <img src="assets/images/chevron-right.svg" alt=""> </div>  
-                    </div>
-                </div>
-                <div class="hero_form d-flex flex-column gap-3">
-                    <h2 class="hero_form_title section_title">
-                        Быстрый поиск
-                    </h2>
-                    <form id="filter_form" class="filter d-flex flex-wrap gap-2 filter_form">
-                        <label class="d-flex flex-column">
-                            <span>DIN/ГОСТ/ISO</span>
-                            <input type="text" class="filter__input form-control" name="standard" placeholder="DIN/ГОСТ/ISO">
-                        </label>
-                        <label class="d-flex flex-column">
-                            <span>Диаметр</span>
-                            <input type="text" class="filter__input form-control" name="diameter" placeholder="Диаметр">
-                        </label>
-                        <label class="d-flex flex-column">
-                            <span>Длина</span>
-                            <input type="text" class="filter__input form-control" name="length" placeholder="Длина">
-                        </label>
-                        <label class="d-flex flex-column slects">
-                            <span class="d-flex align-items-center">Материал</span>
-                            <select class="filter__select form-select" name="material">
-                              <option value="">Материал</option>
-                              <option value="steel">Сталь</option>
-                              <option value="aluminum">Алюминий</option>
-                              <option value="plastic">Пластик</option>
-                            </select>
-                        </label>
-                        <div class="hero_form_btnlists d-flex justify-content-between align-items-end">
-                            <button type="submit" class="filter__btn btn btn-danger">Показать</button>
-                            <button type="reset" class="filter__btn btn btn-outline-danger">Сбросить</button>
-                        </div>
-                      </form>
-                </div>
-            </div>
-            </div>
-        </section>
-        <!-- About section -->
-        <section class="about">
+        <nav class="breadcrumb-nav container" aria-label="breadcrumb">
+            <ol class="breadcrumb-nav__list d-flex p-0">
+            <li class="breadcrumb-nav__item d-flex">
+                <a href="/">Главная</a>
+                <span class="breadcrumb-nav__separator"><img src="assets/images/breadcrumbs_icon.svg" alt=""></span>
+            </li>
+            <li class="breadcrumb-nav__item">
+                <a href="#">Каталог</a>
+                <span class="breadcrumb-nav__separator"><img src="assets/images/breadcrumbs_icon.svg" alt=""></span>
+            </li>
+            <li class="breadcrumb-nav__item">
+                <a href="#">Болты</a>
+                <span class="breadcrumb-nav__separator"><img src="assets/images/breadcrumbs_icon.svg" alt=""></span>
+            </li>
+            <li class="breadcrumb-nav__item breadcrumb-nav__item--active" aria-current="page">
+                DIN 561 A Болт установочный
+            </li>
+            </ol>
+        </nav>
+        <section class="filter">
             <div class="container">
-            <!-- Info about company or mission -->
+                <h2 class="section_title d-flex align-items-center">
+                    DIN 561 A Болт установочный
+                    <span class="filter_counter">(1 000 товаров)</span>
+                </h2>
+                <div class="filter__content">
+                    <div class="filter__sidebar">
+                        <div class="filter_item">
+                            <h3 class="filter_item_title">Категория</h3>
+                            <ul class="filter_item_list">
+                                <li><a href="#">Категория 1</a></li>
+                                <li><a href="#">Категория 2</a></li>
+                                <li><a href="#">Категория 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Catalog section -->
