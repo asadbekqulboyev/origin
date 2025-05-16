@@ -1,11 +1,13 @@
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 10) {
+    if ($(this).scrollTop() > 50) {
       $(".header").addClass("scroll");
     } else {
       $(".header").removeClass("scroll");
+      $(".header__nav").css("display", "flex");
     }
   });
+  
   // hero slider
   const hero_left_slide = new Swiper(".hero__left_slider", {
     loop: true,
@@ -110,7 +112,7 @@ $(document).ready(function () {
   $(".dropdown_mobile").on("click", function (e) {
     e.preventDefault();
     $(this).toggleClass("active");
-    $(this).next(".dorpdown_content").sldeToggle();
+    $(this).next(".dorpdown_content").slideToggle();
   });
 
   // Применяем маску для российского номера телефона
@@ -120,4 +122,20 @@ $(document).ready(function () {
     showMaskOnFocus: true,
     clearIncomplete: true,
   });
+  $(".close_btn").on("click", function () {
+    $.fancybox.close();
+  });
+  $(".sidebar__list .catalog").on("click", function (e) {
+    e.preventDefault();
+    $(".sidebar__list .catalog").removeClass("active");
+    $(".sidebar__subcontent").fadeOut(20);
+    $(this).toggleClass("active");
+    $(this).next(".sidebar__subcontent").slideToggle();
+  });
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".sidebar").length) {
+      $(".sidebar__list .catalog").removeClass("active");
+      $(".sidebar__subcontent").fadeOut(20);
+    }
+  })
 });

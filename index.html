@@ -20,7 +20,7 @@
   <body>
     <div class="wrapper">
         <!-- Header -->
-        <header class="header scroll">
+        <header class="header ">
             <!-- Top header -->
             <div class="header__top " >
                 <div class="container d-none d-lg-flex justify-content-between align-items-center">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-          <div class="container">
+            <div class="container">
             <div class="header__wrap d-flex justify-content-between align-items-center pt-2 pb-2 scroll_none"
             >
               <a href="#" class="header__logo d-flex flex-column align-items-center ">
@@ -139,7 +139,7 @@
                         <span>Запросить расчет</span>
                         <img src="assets/images/calculator.svg" alt="">
                     </a>
-                    <a href="#" class=" d-none d-lg-flex align-items-center gap-2 form_btn">
+                    <a href="#" class=" d-none d-lg-flex align-items-center gap-2 form_btn" data-bs-toggle="modal" data-bs-target="#order">
                         <span>Заказать звонок</span>
                         <img src="assets/images/order-call.svg" alt="">
                     </a>
@@ -167,7 +167,7 @@
                         </span>
                         <span>Корзина</span>
                     </a>
-                    <a href="#" class="form_link d-flex align-items-center  flex-column">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#login" class="form_link d-flex align-items-center  flex-column">
                         <span class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.06916 20.375C8.18049 19.2811 9.68777 18.6665 11.2594 18.6665H20.7409C22.3126 18.6665 23.8198 19.2811 24.9312 20.375C26.0425 21.469 26.6668 22.9527 26.6668 24.4998V26.8332C26.6668 27.4775 26.1362 27.9998 25.4816 27.9998C24.8271 27.9998 24.2965 27.4775 24.2965 26.8332V24.4998C24.2965 23.5716 23.9219 22.6813 23.2551 22.025C22.5883 21.3686 21.6839 20.9998 20.7409 20.9998H11.2594C10.3164 20.9998 9.41206 21.3686 8.74526 22.025C8.07847 22.6813 7.70387 23.5716 7.70387 24.4998V26.8332C7.70387 27.4775 7.17324 27.9998 6.51868 27.9998C5.86412 27.9998 5.3335 27.4775 5.3335 26.8332V24.4998C5.3335 22.9527 5.95783 21.469 7.06916 20.375Z" fill="#E53935"/>
@@ -184,15 +184,17 @@
                 </a>
             </form>
             
-           </div>
-           <div class="header_mobile " id="mobileMenu">
-            <div class="header_mobile_content p-3">
+            </div>
+            <div class="header_mobile " id="mobileMenu">
+            <div class="header_mobile_content">
                 <div class="header_mobile_top d-flex justify-content-between align-items-center">
                     <h4>Меню</h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4716 3.52876C12.7319 3.78911 12.7319 4.21122 12.4716 4.47157L4.47157 12.4716C4.21122 12.7319 3.78911 12.7319 3.52876 12.4716C3.26841 12.2112 3.26841 11.7891 3.52876 11.5288L11.5288 3.52876C11.7891 3.26841 12.2112 3.26841 12.4716 3.52876Z" fill="#212121"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52876 3.52876C3.78911 3.26841 4.21122 3.26841 4.47157 3.52876L12.4716 11.5288C12.7319 11.7891 12.7319 12.2112 12.4716 12.4716C12.2112 12.7319 11.7891 12.7319 11.5288 12.4716L3.52876 4.47157C3.26841 4.21122 3.26841 3.78911 3.52876 3.52876Z" fill="#212121"/>
+                    <span class="close_btn" data-fancybox-close  >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4716 3.52876C12.7319 3.78911 12.7319 4.21122 12.4716 4.47157L4.47157 12.4716C4.21122 12.7319 3.78911 12.7319 3.52876 12.4716C3.26841 12.2112 3.26841 11.7891 3.52876 11.5288L11.5288 3.52876C11.7891 3.26841 12.2112 3.26841 12.4716 3.52876Z" fill="#212121"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.52876 3.52876C3.78911 3.26841 4.21122 3.26841 4.47157 3.52876L12.4716 11.5288C12.7319 11.7891 12.7319 12.2112 12.4716 12.4716C12.2112 12.7319 11.7891 12.7319 11.5288 12.4716L3.52876 4.47157C3.26841 4.21122 3.26841 3.78911 3.52876 3.52876Z" fill="#212121"/>
                         </svg>
+                    </span>
                 </div>
                 <ul class="header_mobile_list p-0 ">
                     <li>
@@ -381,7 +383,7 @@
                     </div>
                   </div>
             </div>
-           </div>
+            </div>
         </header>
         <!-- main -->
         <main>
@@ -397,90 +399,1800 @@
                         <span>Болты</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Винты</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Гайки</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Заклепки</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Кольца стопорные</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Кольца стопорные</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Саморезы</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Хомуты, скобы и стяжки</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Шайбы</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Шпильки резьбовые</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Шплинты</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between">
                         <span>Шпонки</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between disable">
                         <span>Шурупы</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between disable">
                         <span>Штифты</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <a href="" class="catalog d-flex align-items-center justify-content-between disable">
                         <span>Приварной крепёж</span>
                         <img src="assets/images/arrow_left.svg" alt="link" class="arrow_left">
                     </a>
+                    <div class="sidebar__subcontent">
+                        <ul class="d-flex flex-wrap">
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    DIN 315
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 </ul>
             </div>
@@ -1692,14 +3404,156 @@
     </div>
 
     <!-- Модальные окна -->
-    <div class="modal fade" id="modalExample" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <!-- Content here -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal__header">
+              <h5 class="modal-title w-100 text-center">Вход</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal__profile d-flex justify-content-center">
+              <span>Нет аккаунта?</span>
+              <button type="button"  data-bs-toggle="modal" data-bs-target="#registration">Регистрация</button>
+            </div>
+            <div class="modal__body">
+              <div class="form__inputs">
+                  <label class="form__input_item">
+                      <input type="text" id="contact_inputs" class="form_input" placeholder=" " required>
+                      <span class="form_label">
+                          Ваша почта или телефон <span class="required">*</span>
+                      </span>
+                  </label>
+                  <label class="form__input_item">
+                      <input type="password" id="contact_inputs" class="form_input" placeholder=" " required>
+                      <span class="form_label">
+                          Пароль <span class="required">*</span>
+                      </span>
+                  </label>
+                  <div class="form__check_item">
+                      <div class="form-check">
+                        <input class="form-check-input" required type="checkbox" id="rememberMe">
+                        <label class="form-check-label text-muted" for="rememberMe">
+                          Запомнить меня
+                        </label>
+                      </div>
+                      <a href="#" class="text-decoration-underline text-dark">
+                        Забыли пароль?
+                      </a>
+                    </div>
+                    <div class="form__check_item">
+                      <div class="form-check">
+                          <input class="form-check-input" required type="checkbox" id="policy">
+                          <label class="form-check-label" for="policy">
+                              Я согласен(а) с обработкой персональных данных в соответствии с <a href="#"> политикой конфиденциальности</a>.
+                          </label>
+                        </div>
+                    </div>
+                    <button type="button" class="button w-100">Войти</button>
+                    <div class="input_info d-flex a">
+                      <span class="required">*</span>
+                      <span>- обязательно к заполнению</span>
+                    </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
+    <div class="modal fade " id="registration" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal__header">
+            <h5 class="modal-title w-100 text-center">Вход</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal__profile d-flex justify-content-center">
+            <span>Есть регистрация?</span>
+            <button type="button"  data-bs-toggle="modal" data-bs-target="#login">Войти</button>
+          </div>
+          <div class="modal__body">
+            <div class="form__inputs">
+                <label class="form__input_item">
+                    <input type="text" id="contact_inputs" class="form_input" placeholder=" " required>
+                    <span class="form_label">
+                        Ваше имя<span class="required">*</span>
+                    </span>
+                </label>
+                <label class="form__input_item">
+                    <input type="text" id="contact_inputs" class="form_input" placeholder=" " required>
+                    <span class="form_label">
+                        Ваша почта или телефон <span class="required">*</span>
+                    </span>
+                </label>
+                <label class="form__input_item">
+                    <input type="password" id="contact_inputs" class="form_input" placeholder=" " required>
+                    <span class="form_label">
+                        Пароль <span class="required">*</span>
+                    </span>
+                </label>    
+                  <div class="form__check_item">
+                    <div class="form-check">
+                        <input class="form-check-input" required type="checkbox" id="policy">
+                        <label class="form-check-label" for="policy">
+                            Я согласен(а) с обработкой персональных данных в соответствии с <a href="#"> политикой конфиденциальности</a>.
+                        </label>
+                      </div>
+                  </div>
+                  <button type="button" class="button w-100">Зарегистрироваться</button>
+                  <div class="input_info d-flex a">
+                    <span class="required">*</span>
+                    <span>- обязательно к заполнению</span>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="modal fade show" id="order" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal__header">
+              <h5 class="modal-title w-100 text-center">Заказать звонок</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal__body">
+              <div class="form__inputs">
+                  <label class="form__input_item">
+                      <input type="text" id="contact_inputs" class="form_input" placeholder=" " required>
+                      <span class="form_label">
+                        Ваше имя<span class="required">*</span>
+                      </span>
+                  </label>
+                  <label class="form__input_item">
+                      <input type="tel" id="contact_inputs" class="form_input" placeholder=" " required>
+                      <span class="form_label">
+                        +7 (___) ___-__-__<span class="required">*</span>
+                      </span>
+                  </label>
+                  <label class="form__input_item">
+                      <select name="select" id="" class="form-control" placeholder="Удобное время для звонка">
+                        <option value="select1">Удобное время для звонка</option>
+                      </select>
+                      <img src="assets/images/arrow.svg" alt="" class="arrow">
+                  </label>    
+                    <div class="form__check_item">
+                      <div class="form-check">
+                          <input class="form-check-input" required type="checkbox" id="policy">
+                          <label class="form-check-label" for="policy">
+                              Я согласен(а) с обработкой персональных данных в соответствии с <a href="#"> политикой конфиденциальности</a>.
+                          </label>
+                        </div>
+                    </div>
+                    <button type="button" class="button w-100">Отправить заявку</button>
+                    <div class="input_info d-flex a">
+                      <span class="required">*</span>
+                      <span>- обязательно к заполнению</span>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
     <!-- jQuery -->
     <script src="assets/libs/jquery-3.7.1.min.js"></script>
     <script src="assets/libs/jquery.inputmask.min.js"></script>

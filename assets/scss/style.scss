@@ -20,6 +20,7 @@
 @import "_contact.scss";
 @import "footer.scss";
 @import "breadcrumb.scss";
+@import "modal.scss";
 *,
 h2,
 h3,
@@ -33,14 +34,14 @@ p {
 }
 :root {
   /* Шрифты */
+  --btn-bg: #E53935;
+  --color-secondary: #999;
   --font-fmily: "PT Sans", sans-serif;
   /* Размеры заголовков */
   --font-size-h1: 36px;
   --font-size-h2: 24px;
-  --font-size-h3: 20px;
-
+  --font-size-h3: 20px
   /* Цвета кнопок */
-  --btn-bg: #e53935;
   --btn-bg-opacity: #fbe1e0;
   --btn-text-color: #ffffff;
   --btn-hover-bg: #0056b3;
@@ -196,6 +197,11 @@ main {
       gap: 8px;
       flex: 1 0 0;
       background: #fbe1e0;
+      border: 1px solid transparent;
+      transition: all 0.2s linear;
+      &:hover {
+        border-color: #cc2f2c !important;
+      }
     }
   }
 }
@@ -210,4 +216,7 @@ select.form-control:focus,
 textarea.form-control:focus {
   border-color: #212121 !important;
   box-shadow: 0 0 0 transparent;
+}
+.close_btn {
+  cursor: pointer;
 }

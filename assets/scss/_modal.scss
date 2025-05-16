@@ -1,0 +1,127 @@
+.modal {
+  &-title {
+    color: var(--btn-bg);
+    text-align: center;
+    font-size: var(--font-size-h2);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+  &__header {
+    padding: 32px 20px;
+    border-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      padding: 24px 16px;
+    }
+    .btn-close {
+      &:hover {
+        background: #fff !important;
+      }
+    }
+  }
+  &__profile {
+    font-size: 14px;
+    gap: 8px;
+    button {
+      padding: 0;
+      color: var(--btn-bg);
+      background: transparent;
+    }
+  }
+  &__body {
+    padding: 32px 20px;
+    @media (max-width: 768px) {
+      padding: 24px 16px;
+    }
+    .form__inputs {
+      .form__input_item {
+        position: relative;
+        display: block;
+        margin: 20px 0;
+        &:first-child {
+          margin-top: 0;
+        }
+        select {
+          padding: 12px 20px;
+          & ~ .arrow {
+            position: absolute;
+            top: 38%;
+            right: 20px;
+            transition: all 0.2s linear;
+          }
+          &:focus {
+            & ~ .arrow {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .form_input {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #fff;
+        outline: none;
+      }
+
+      .form_label {
+        position: absolute;
+        left: 10px;
+        top: 12px;
+        color: #999;
+        font-size: 16px;
+        pointer-events: none;
+        transition: 0.2s ease all;
+        background: white;
+        padding: 0 4px;
+      }
+
+      .form_input:focus + .form_label,
+      .form_input:not(:placeholder-shown) + .form_label {
+        display: none;
+      }
+
+      .required {
+        color: red;
+      }
+    }
+    .button {
+      margin-top: 8px;
+    }
+    .input_info {
+      gap: 8px;
+      margin-top: 32px;
+      @media (max-width: 768px) {
+        margin-top: 24px;
+      }
+      span {
+        color: var(--color-secondary);
+      }
+    }
+    .form__check_item {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      .form-check {
+        margin-bottom: 0;
+      }
+      .form-check-label {
+        a {
+          color: var(--btn-bg);
+        }
+      }
+    }
+  }
+  &#order {
+    .modal__header {
+      padding-bottom: 0;
+    }
+  }
+}
