@@ -1,13 +1,15 @@
 $(document).ready(function () {
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $(".header").addClass("scroll");
-    } else {
-      $(".header").removeClass("scroll");
-      $(".header__nav").css("display", "flex");
-    }
-  });
-  
+  if ($(window).width() > 992) {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $(".header").addClass("scroll");
+      } else {
+        $(".header").removeClass("scroll");
+        $(".header__nav").css("display", "flex");
+      }
+    });
+  }
+
   // hero slider
   const hero_left_slide = new Swiper(".hero__left_slider", {
     loop: true,
@@ -137,5 +139,5 @@ $(document).ready(function () {
       $(".sidebar__list .catalog").removeClass("active");
       $(".sidebar__subcontent").fadeOut(20);
     }
-  })
+  });
 });
