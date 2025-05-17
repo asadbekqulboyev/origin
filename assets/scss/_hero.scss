@@ -251,6 +251,11 @@
     border-radius: 4px;
     background: #fafafa;
     margin-top: 16px;
+    @media (max-width: 768px) {
+      margin-top: 8px;
+      width: calc(100% + 25px);
+      margin-left: -12px;
+    }
     .filter_form {
       label {
         gap: 4px;
@@ -263,6 +268,7 @@
         }
         @media (max-width: 768px) {
           width: 100%;
+          font-size: 12px;
         }
         &.slects {
           width: 35%;
@@ -278,13 +284,9 @@
             top: 0;
             right: 0;
             position: absolute;
-
-            // Hide default arrow <b> tag
             b {
               display: none;
             }
-
-            // Insert custom SVG
             &::after {
               content: "";
               display: block;
@@ -342,11 +344,15 @@
           background: #e53935;
           border: 0;
           color: #fff;
+
           &:last-child {
             background: #fbe1e0;
             color: #e53935;
             border: 1px solid transparent;
             transition: all 0.2s linear;
+            @media (max-width: 768px) {
+              order: -1;
+            }
             &:hover {
               border-color: #cc2f2c !important;
             }
