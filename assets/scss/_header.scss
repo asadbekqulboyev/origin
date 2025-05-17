@@ -9,10 +9,10 @@
   @media (max-width: 992px) {
     padding: 15px 0;
   }
+  @media (max-width: 768px) {
+    padding: 12px 0 8px;
+  }
   &__wrap {
-    @media (max-width: 768px) {
-      display: none !important;
-    }
   }
   &__top {
     background: #fafafa;
@@ -79,7 +79,24 @@
     @media (max-width: 992px) {
       flex: 0 0 auto;
     }
-
+    @media (max-width: 768px) {
+      flex: 0 0 auto;
+      position: absolute;
+      left: 0;
+      display: flex !important;
+      right: 0;
+      z-index: 1111111;
+      width: fit-content;
+      top: 19px;
+      margin: 0 auto;
+      margin-left: 35%;
+    }
+    @media (max-width: 556px) {
+      margin-left: 30%;
+    }
+    @media (max-width: 410px) {
+      margin-left: 27%;
+    }
     h2 {
       text-transform: uppercase;
       color: #212121;
@@ -128,6 +145,7 @@
     }
     .header__logo {
       display: none !important;
+
       h2 {
         text-transform: uppercase;
         color: #212121;
@@ -150,6 +168,8 @@
       cursor: pointer;
       @media (max-width: 992px) {
         height: fit-content;
+        width: fit-content;
+        flex: 0 0 auto;
       }
     }
     .form__content {
@@ -157,6 +177,12 @@
       @media (max-width: 992px) {
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 85%;
+      }
+      @media (max-width: 768px) {
+        justify-content: flex-end;
+        width: 100%;
+        gap: 8px 4px !important;
       }
       .form_btn {
         color: #212121;
@@ -177,8 +203,13 @@
     .form__search {
       position: relative;
       width: 47%;
+      @media (max-width: 992px) {
+        width: 72%;
+      }
       @media (max-width: 768px) {
-        width: 68%;
+        width: calc(100% + 75px);
+        order: 3;
+        margin-left: -33%;
       }
       input {
         width: 100%;
@@ -228,6 +259,10 @@
         color: #fafafa;
         right: 10px;
         top: 0;
+        @media (max-width: 768px) {
+          top: 9px;
+          font-size: 10px;
+        }
       }
       &:hover {
         color: #e53935;
@@ -448,6 +483,7 @@
   top: 0;
   padding: 20px;
   width: 264px !important;
+  border-radius: 8px 0 0 8px;
   a {
     text-transform: uppercase;
     @media (max-width: 992px) {
@@ -460,7 +496,6 @@
   }
   .header__nav {
     gap: 32px;
-
     flex-direction: column !important;
     .header__nav {
       width: 100%;

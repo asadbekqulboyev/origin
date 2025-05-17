@@ -5,10 +5,22 @@
     border-radius: 4px;
     height: fit-content;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
+    @media (max-width: 768px) {
+      box-shadow: 0 0 0 0 transparent;
+    }
   }
   &__left_slider {
     width: 30%;
     overflow: hidden;
+    @media (max-width: 1025px) {
+      width: 35%;
+    }
+    @media (max-width: 992px) {
+      width: 39%;
+    }
+    @media (max-width: 992px) {
+      width: 49%;
+    }
     img {
       width: 100%;
       object-fit: contain;
@@ -25,14 +37,30 @@
   }
   &__banner {
     position: relative;
+    @media (max-width: 992px) {
+      width: 51%;
+    }
     &_item {
       height: 100%;
     }
   }
-  &__slider_content {
+  &_btns {
+    @media (max-width: 992px) {
+      margin-top: 20px;
+    }
+  }
+  .hero__slider_content {
+    @media (max-width: 768px) {
+      border-radius: 4px;
+      height: 100%;
+      overflow: hidden;
+    }
   }
   &_slider {
     overflow: hidden;
+    @media (max-width: 768px) {
+      width: calc(100% + 15px);
+    }
     .swiper-slide {
       position: relative;
       img {
@@ -52,14 +80,26 @@
         padding: 25px;
       }
 
+      @media (max-width: 768px) {
+        padding: 25px 0 0 10px;
+        height: 100%;
+      }
+
       .hero_text {
         margin-bottom: 20px;
         margin-top: 12px;
+        @media (max-width: 992px) {
+          display: none;
+        }
       }
       h2 {
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
+        @media (max-width: 768px) {
+          font-size: 20px;
+          line-height: 100%;
+        }
       }
       .btn {
         min-width: 138px;
@@ -68,9 +108,17 @@
         border-radius: 4px;
         background: #e53935;
         border: 0;
+        @media (max-width: 768px) {
+          min-width: 100px;
+          padding: 11.5px 16px;
+          line-height: normal;
+        }
         &:last-child {
           background: #fbe1e0;
           color: #e53935;
+          @media (max-width: 768px) {
+            display: none !important;
+          }
         }
       }
     }
@@ -88,10 +136,41 @@
   &_cards {
     margin-top: 24px;
     overflow: hidden;
+    @media (max-width: 556px) {
+      margin-top: 8px;
+    }
+    .swiper-wrapper {
+      @media (max-width: 556px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    .swiper-slide:first-child,
+    .swiper-slide:nth-child(2) {
+      @media (max-width: 556px) {
+        img {
+          padding-left: 5px;
+          padding-right: 5px;
+          width: 53px;
+        }
+      }
+    }
+    .swiper-slide:nth-child(3),
+    .swiper-slide:nth-child(4),
+    .swiper-slide:nth-child(5) {
+      @media (max-width: 556px) {
+        img {
+          padding-right: 5px;
+          width: 53px;
+        }
+      }
+    }
     .swiper_btnlists {
       gap: 31px;
       margin-top: 8px;
-
+      @media (max-width: 556px) {
+        display: none !important;
+      }
       .btn {
         width: 20px;
         height: 20px;
@@ -109,9 +188,27 @@
     }
     .hero_card_top {
       gap: 12px;
+      @media (max-width: 556px) {
+        flex-direction: column;
+        gap: 4px;
+      }
+      img {
+        @media (max-width: 556px) {
+          display: none;
+        }
+      }
+    }
+    .mobile_icon {
+      display: none;
+      @media (max-width: 556px) {
+        display: block;
+      }
     }
     .hero_card_number {
       color: #999;
+      @media (max-width: 556px) {
+        display: none;
+      }
     }
     .hero_card_title {
       font-size: 16px;
@@ -119,9 +216,34 @@
       font-weight: 700;
       line-height: normal;
       text-transform: uppercase;
+      @media (max-width: 556px) {
+        font-size: 14px;
+        text-transform: none;
+      }
     }
     .hero_card_info {
       margin-top: 12px;
+      @media (max-width: 556px) {
+        display: none;
+        font-size: 14px;
+      }
+      &.mobile_content {
+        display: none;
+        @media (max-width: 556px) {
+          display: block;
+          margin-top: 0;
+        }
+      }
+    }
+    .hero_card {
+      @media (max-width: 556px) {
+        padding: 4px 0;
+        border-radius: 4px;
+        background: #fafafa;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
     }
   }
   &_form {
@@ -254,6 +376,15 @@
       width: 245px;
       right: calc(-100% - 29px);
     }
+    @media (max-width: 992px) {
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 100%;
+      padding: 5px;
+      margin-top: 4px;
+    }
+
     ul {
       justify-content: space-between;
       gap: 4px 0;

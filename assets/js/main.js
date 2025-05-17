@@ -18,28 +18,56 @@ $(document).ready(function () {
       clickable: true,
     },
   });
-  const hero_slider = new Swiper(".hero_slider", {});
-  const hero_cards = new Swiper(".hero_cards", {
-    navigation: {
-      nextEl: ".hero .button-prev",
-      prevEl: ".hero  .button-next",
-    },
-    spaceBetween: 8,
+  const hero_slider = new Swiper(".hero_slider", {
+    spaceBetween: 4,
     breakpoints: {
       0: {
-        slidesPerView: 1,
-      },
-      556: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.05,
       },
       768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
     },
   });
+  let hero_cards; // global o'zgaruvchi
+
+  function initHeroSwiper() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth >= 556 && !hero_cards) {
+      hero_cards = new Swiper(".hero_cards", {
+        navigation: {
+          nextEl: ".hero .button-prev",
+          prevEl: ".hero .button-next",
+        },
+        spaceBetween: 8,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          556: {
+            slidesPerView: 1.5,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    } else if (screenWidth < 556 && hero_cards) {
+      hero_cards.destroy(true, true); // Swiper'ni yo'qotish
+      hero_cards = null;
+    }
+  }
+
+  // Dastlab ishga tushirish
+  initHeroSwiper();
+
+  // Ekran o'lchami o'zgarsa qayta tekshiradi
+  window.addEventListener("resize", initHeroSwiper);
+
   //   select 2
   $(".filter__select").select2({
     placeholder: "Материал",
