@@ -441,6 +441,10 @@
         top: auto;
         bottom: 0;
       }
+      a {
+        transition: all 0.2s linear;
+        
+      }
     }
   }
 }

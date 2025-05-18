@@ -22,25 +22,23 @@
         <!-- Header -->
         <header class="header ">
             <!-- Top header -->
-            <div class="header__top " >
-                <div class="container d-none d-lg-flex justify-content-between align-items-center">
+            <div class="header__top" >
+                <div class="container">
                     <span
                       >Свяжитесь с нами удобным способом — ответим на все ваши
                       вопросы!</span
                     >
-                    <div class="header__top_contacts d-none align-items-center pt-2 pb-2 d-md-flex">
+                    <div class="header__top_contacts">
                       <a href="tel:+74951832333" class="d-flex align-items-center gap-1">
                         <img src="assets/images/tel.svg" alt="" />
                         <span>+7 495 183-23-33</span>
                       </a>
-                      <a
-                        href="mailto:info@originkrepeg.ru"
-                        class="d-flex align-items-center gap-1"
+                      <a href="mailto:info@originkrepeg.ru" class="d-flex align-items-center gap-1"
                       >
                         <img src="assets/images/mail.svg" alt="" />
                         <span>info@originkrepeg.ru</span>
                       </a>
-                      <div class="header__top_social d-flex align-items-center gap-1">
+                      <div class="header__top_social ">
                         <a
                           href="#"
                           class="d-flex align-items-center gap-1 justify-content-center "
@@ -58,13 +56,13 @@
                 </div>
             </div>
             <div class="container">
-            <div class="header__wrap d-flex justify-content-between align-items-center pt-2 pb-2 scroll_none"
+            <div class="header__wrap  scroll_none"
             >
-              <a href="#" class="header__logo d-flex flex-column align-items-center ">
+              <a href="#" class="header__logo ">
                 <h2>origin</h2>
                 <span>Интернет-магазин крепежа</span>
               </a>
-              <div class="header__nav " id="header__nav">
+              <div class="header__nav" id="header__nav">
                 <nav class="navbar navbar-expand-lg navbar-light">
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav header__nav">
@@ -100,9 +98,8 @@
                     </ul>
                   </div>
                 </nav>
+              </div>
             </div>
-            </div>
-            
             <form action="#" class="header__form d-flex justify-content-between gap-3
              ">
              <a href="#" class="header__logo d-flex flex-column align-items-center ">
@@ -183,7 +180,6 @@
                     <span></span>
                 </a>
             </form>
-            
             </div>
             <div class="header_mobile " id="mobileMenu">
             <div class="header_mobile_content">
@@ -4247,18 +4243,6 @@
             </div>
             </div>
         </section>
-        <!-- About section -->
-        <section class="about">
-            <div class="container">
-            <!-- Info about company or mission -->
-            </div>
-        </section>
-        <!-- Catalog section -->
-        <section class="catalog">
-            <div class="container">
-            <!-- Categories, filters, tabs -->
-            </div>
-        </section>
         <!-- Product list -->
         <section class="products">
             <div class="container">
@@ -4270,10 +4254,10 @@
                     <a href="#" class="products_top_link section_title">Новинки</a>
                 </li>
                 <li>
-                    <a href="#" class="products_top_link section_title">Акции и предложения</a>
+                    <a href="#" class="products_top_link section_title">Акции <span>и предложения</span></a>
                 </li>
             </ul>
-            <div class="swiper products_cards">
+            <div class="swiper products_cards products_slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide products_card">
                         <div class="products_card_top">
@@ -4305,11 +4289,56 @@
                                 18.50 ₽/шт
                             </div>
                             <div class="prducts_button d-flex align-items-center gap-1 ">
-                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
+                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                <img src="assets/images/basket.svg" alt=""> 
                                 <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
                                 </a>
                                 <a href="#" class="btn btn-primary">
                                     <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide products_card">
+                        <div class="products_card_top">
+                            <span class="tags products_card_new">хит</span>
+                            <a href="#" class="products_card_img d-flex">
+                                <img src="assets/images/product_img.png" alt="">
+                            </a>
+                        </div>
+                        <div class="product_card_body">
+                            <a href="#">
+                                <h3 class="products_card_title">DIN 6921 000000000000000000
+                                    000000000000000000000000</h3>
+                            </a>
+                            <ul class="charackteristics d-flex flex-column">
+                                <li>
+                                    <span>Диаметр:</span>
+                                    <span>10 мм</span>
+                                </li>
+                                <li>
+                                    <span>Длина:</span>
+                                    <span>35 мм</span>
+                                </li>
+                                <li>
+                                    <span>Материал:</span>
+                                    <span>Сталь</span>
+                                </li>
+                            </ul>
+                            <div class="price_new">
+                                18.50 ₽/шт
+                            </div>
+                            <div class="prducts_button d-flex align-items-center gap-1 ">
+                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                <img src="assets/images/basket.svg" alt=""> 
+                                <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -4346,9 +4375,53 @@
                             <div class="prducts_button d-flex align-items-center gap-1 ">
                                 <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
                                 <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
                                 </a>
                                 <a href="#" class="btn btn-primary">
                                     <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide products_card">
+                        <div class="products_card_top">
+                            <span class="tags products_card_new">хит</span>
+                            <a href="#" class="products_card_img d-flex">
+                                <img src="assets/images/product_img.png" alt="">
+                            </a>
+                        </div>
+                        <div class="product_card_body">
+                            <a href="#">
+                                <h3 class="products_card_title">DIN 6921 000000000000000000
+                                    000000000000000000000000</h3>
+                            </a>
+                            <ul class="charackteristics d-flex flex-column">
+                                <li>
+                                    <span>Диаметр:</span>
+                                    <span>10 мм</span>
+                                </li>
+                                <li>
+                                    <span>Длина:</span>
+                                    <span>35 мм</span>
+                                </li>
+                                <li>
+                                    <span>Материал:</span>
+                                    <span>Сталь</span>
+                                </li>
+                            </ul>
+                            <div class="price_new">
+                                18.50 ₽/шт
+                            </div>
+                            <div class="prducts_button d-flex align-items-center gap-1 ">
+                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                <img src="assets/images/basket.svg" alt=""> 
+                                <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -4385,9 +4458,53 @@
                             <div class="prducts_button d-flex align-items-center gap-1 ">
                                 <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
                                 <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
                                 </a>
                                 <a href="#" class="btn btn-primary">
                                     <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide products_card">
+                        <div class="products_card_top">
+                            <span class="tags products_card_new">хит</span>
+                            <a href="#" class="products_card_img d-flex">
+                                <img src="assets/images/product_img.png" alt="">
+                            </a>
+                        </div>
+                        <div class="product_card_body">
+                            <a href="#">
+                                <h3 class="products_card_title">DIN 6921 000000000000000000
+                                    000000000000000000000000</h3>
+                            </a>
+                            <ul class="charackteristics d-flex flex-column">
+                                <li>
+                                    <span>Диаметр:</span>
+                                    <span>10 мм</span>
+                                </li>
+                                <li>
+                                    <span>Длина:</span>
+                                    <span>35 мм</span>
+                                </li>
+                                <li>
+                                    <span>Материал:</span>
+                                    <span>Сталь</span>
+                                </li>
+                            </ul>
+                            <div class="price_new">
+                                18.50 ₽/шт
+                            </div>
+                            <div class="prducts_button d-flex align-items-center gap-1 ">
+                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                <img src="assets/images/basket.svg" alt=""> 
+                                <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
+                                </a>
+                                <a href="#" class="btn btn-primary">
+                                    <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -4424,9 +4541,11 @@
                             <div class="prducts_button d-flex align-items-center gap-1 ">
                                 <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
                                 <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
                                 </a>
                                 <a href="#" class="btn btn-primary">
                                     <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -4463,126 +4582,11 @@
                             <div class="prducts_button d-flex align-items-center gap-1 ">
                                 <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
                                 <span>В корзину</span>
+                                <span class="mobile_text">Купить в 1 клик</span>
                                 </a>
-                                <a href="#" class="btn btn-primary">
+                                 <a href="#" class="btn btn-primary">
                                     <img src="assets/images/chev.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide products_card">
-                        <div class="products_card_top">
-                            <span class="tags products_card_new">хит</span>
-                            <a href="#" class="products_card_img d-flex">
-                                <img src="assets/images/product_img.png" alt="">
-                            </a>
-                        </div>
-                        <div class="product_card_body">
-                            <a href="#">
-                                <h3 class="products_card_title">DIN 6921 000000000000000000
-                                    000000000000000000000000</h3>
-                            </a>
-                            <ul class="charackteristics d-flex flex-column">
-                                <li>
-                                    <span>Диаметр:</span>
-                                    <span>10 мм</span>
-                                </li>
-                                <li>
-                                    <span>Длина:</span>
-                                    <span>35 мм</span>
-                                </li>
-                                <li>
-                                    <span>Материал:</span>
-                                    <span>Сталь</span>
-                                </li>
-                            </ul>
-                            <div class="price_new">
-                                18.50 ₽/шт
-                            </div>
-                            <div class="prducts_button d-flex align-items-center gap-1 ">
-                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
-                                <span>В корзину</span>
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <img src="assets/images/chev.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide products_card">
-                        <div class="products_card_top">
-                            <span class="tags products_card_new">хит</span>
-                            <a href="#" class="products_card_img d-flex">
-                                <img src="assets/images/product_img.png" alt="">
-                            </a>
-                        </div>
-                        <div class="product_card_body">
-                            <a href="#">
-                                <h3 class="products_card_title">DIN 6921 000000000000000000
-                                    000000000000000000000000</h3>
-                            </a>
-                            <ul class="charackteristics d-flex flex-column">
-                                <li>
-                                    <span>Диаметр:</span>
-                                    <span>10 мм</span>
-                                </li>
-                                <li>
-                                    <span>Длина:</span>
-                                    <span>35 мм</span>
-                                </li>
-                                <li>
-                                    <span>Материал:</span>
-                                    <span>Сталь</span>
-                                </li>
-                            </ul>
-                            <div class="price_new">
-                                18.50 ₽/шт
-                            </div>
-                            <div class="prducts_button d-flex align-items-center gap-1 ">
-                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
-                                <span>В корзину</span>
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <img src="assets/images/chev.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide products_card">
-                        <div class="products_card_top">
-                            <span class="tags products_card_new">хит</span>
-                            <a href="#" class="products_card_img d-flex">
-                                <img src="assets/images/product_img.png" alt="">
-                            </a>
-                        </div>
-                        <div class="product_card_body">
-                            <a href="#">
-                                <h3 class="products_card_title">DIN 6921 000000000000000000
-                                    000000000000000000000000</h3>
-                            </a>
-                            <ul class="charackteristics d-flex flex-column">
-                                <li>
-                                    <span>Диаметр:</span>
-                                    <span>10 мм</span>
-                                </li>
-                                <li>
-                                    <span>Длина:</span>
-                                    <span>35 мм</span>
-                                </li>
-                                <li>
-                                    <span>Материал:</span>
-                                    <span>Сталь</span>
-                                </li>
-                            </ul>
-                            <div class="price_new">
-                                18.50 ₽/шт
-                            </div>
-                            <div class="prducts_button d-flex align-items-center gap-1 ">
-                                <a href="#" class="btn btn-danger d-flex align-items-center justify-content-center"><img src="assets/images/basket.svg" alt=""> 
-                                <span>В корзину</span>
-                                </a>
-                                <a href="#" class="btn btn-primary">
-                                    <img src="assets/images/chev.svg" alt="">
+                                    <img src="assets/images/card_shop.svg" alt="">
                                 </a>
                             </div>
                         </div>
@@ -4648,8 +4652,9 @@
                 <a href="#" class="btn btn-light">Шайбы</a>
                 <a href="#" class="btn btn-light text-red">Смотреть все</a>
             </div>
-            <div class=" products_cards d-flex flex-wrap justify-content-between">
-                <div class="products_card">
+            <div class="swiper products_cards ">
+                <div class="swiper-wrapper">                
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4662,7 +4667,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4676,7 +4681,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4689,7 +4694,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4702,7 +4707,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4715,7 +4720,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4728,7 +4733,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4742,7 +4747,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4755,7 +4760,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4768,7 +4773,7 @@
                        
                     </div>
                 </div>
-                <div class="products_card">
+                <div class="swiper-slide products_card">
                     <div class="products_card_top">
                         <a href="#" class="products_card_img d-flex">
                             <img src="assets/images/product_img.png" alt="">
@@ -4780,8 +4785,10 @@
                         </a>
                        
                     </div>
+                </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
             </div>
         </section>
         <section class="additional">
@@ -4789,22 +4796,42 @@
                 <h2 class="section_title">Дополнительные услуги производства</h2>
                 <div class="additional_items d-flex flex-wrap justify-content-between">
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        Цинковое покрытие
+                        <span class="additional_item_title">Цинковое покрытие</span>
+                        <div class="additional_item_img" hidden><img src="./assets/images/aditional_icon6.png" alt=""></div>
                     </div>
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        Цинковое покрытие
+                        <span class="additional_item_title">
+                            Никелевое покрытие
+                        </span>
+                        <div class="additional_item_img" hidden><img src="./assets/images/aditional_icon1.png" alt=""></div>
                     </div>
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        Доработка головки болта
+                        <span class="additional_item_title">
+                            Доработка головки болта
+                        </span>
+                        <div class="additional_item_img" hidden><img src="./assets/images/aditional_icon2.png" alt=""></div>
                     </div>
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        <img src="assets/images/bolt.png" alt="">
+                        <span hidden class="additional_item_title hidden">
+                            Доработка резьбовой части винта
+                        </span>
+                        <div class="additional_item_img">
+                            <img src="assets/images/bolt.png" alt="" class="desctop_icon">
+                        </div>
                     </div>
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        Термообработка металла
+                        <span class="additional_item_title">Термообработка металла</span>
+                        <div class="additional_item_img" hidden>
+                            <img src="assets/images/aditional_icon4.png" alt="">
+                        </div>
                     </div>
                     <div class="additional_item d-flex align-items-center justify-content-center">
-                        Пескоструйная обработка
+                        <span class="additional_item_title">
+                            Пескоструйная обработка
+                        </span>
+                        <div class="additional_item_img" hidden>
+                            <img src="assets/images/aditional_icon5.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>

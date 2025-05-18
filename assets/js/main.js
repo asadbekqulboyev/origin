@@ -77,7 +77,7 @@ $(document).ready(function () {
     elements_selector: ".lazy",
   });
   //   products_cards
-  let products_cards = new Swiper(".products_cards", {
+  let products_cards = new Swiper(".products_slider", {
     navigation: {
       nextEl: ".products .button-prev",
       prevEl: ".products  .button-next",
@@ -85,10 +85,10 @@ $(document).ready(function () {
     spaceBetween: 8,
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2.05,
       },
       556: {
-        slidesPerView: 1.5,
+        slidesPerView: 2.3,
       },
       768: {
         slidesPerView: 2,
@@ -100,6 +100,63 @@ $(document).ready(function () {
         slidesPerView: 5,
       },
     },
+  });
+  let popular_slide = new Swiper(".pupular .products_cards ", {
+    grid: {
+      rows: 2,
+      fill: "row",
+    },
+    spaceBetween: 16,
+    pagination: {
+      el: ".pupular .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2.06,
+      },
+      556: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  // card height
+  function equalizeSlidesHeight() {
+    let maxHeight = 0;
+
+    $(".pupular .products_cards .swiper-slide").each(function () {
+      let thisHeight = $(this).outerHeight();
+      if (thisHeight > maxHeight) {
+        maxHeight = thisHeight;
+      }
+    });
+
+    $(".pupular .products_cards .swiper-slide").css("height", maxHeight + "px");
+  }
+
+  // Swiper yuklangandan so‘ng chaqiring:
+  $(document).ready(function () {
+    equalizeSlidesHeight();
+
+    // Ekran o'lchami o'zgarsa, qaytadan tekislasin:
+    $(window).on("resize", function () {
+      // Avval balandlikni tozalaymiz
+      $(".pupular .products_cards .swiper-slide").css("height", "auto");
+      equalizeSlidesHeight();
+    });
   });
 
   const sertficatesSlide = new Swiper(".sertficates_slide", {
@@ -155,17 +212,27 @@ $(document).ready(function () {
   $(".close_btn").on("click", function () {
     $.fancybox.close();
   });
-  $(".sidebar__list .catalog").on("click", function (e) {
-    e.preventDefault();
-    $(".sidebar__list .catalog").removeClass("active");
-    $(".sidebar__subcontent").fadeOut(20);
-    $(this).toggleClass("active");
-    $(this).next(".sidebar__subcontent").slideToggle();
-  });
-  $(document).on("click", function (e) {
-    if (!$(e.target).closest(".sidebar").length) {
+  if ($(window).width() > 992) {
+    $(".sidebar__list .catalog").on("click", function (e) {
+      e.preventDefault();
       $(".sidebar__list .catalog").removeClass("active");
       $(".sidebar__subcontent").fadeOut(20);
-    }
-  });
+      $(this).toggleClass("active");
+      $(this).next(".sidebar__subcontent").slideToggle();
+    });
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".sidebar").length) {
+        $(".sidebar__list .catalog").removeClass("active");
+        $(".sidebar__subcontent").fadeOut(20);
+      }
+    });
+  } else {
+    $(".header_mobile .sidebar__list .catalog").on("click", function (e) {
+      e.preventDefault();
+      $(".header_mobile .sidebar__list .catalog").removeClass("active");
+      $(".header_mobile .sidebar__subcontent").fadeOut(20);
+      $(this).toggleClass("active");
+      $(this).next(".header_mobile .sidebar__subcontent").slideToggle();
+    });
+  }
 });

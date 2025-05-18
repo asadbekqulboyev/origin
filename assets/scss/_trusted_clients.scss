@@ -8,6 +8,8 @@
     margin-top: 24px;
     @media (max-width: 768px) {
       flex-wrap: wrap;
+      margin-top: 16px;
+      gap: 3px 3px;
     }
     &_item {
       width: 100%;
@@ -21,7 +23,7 @@
         width: calc(50% - 8px);
       }
       @media (max-width: 768px) {
-        width: calc(50% - 8px);
+        width: calc(50% - 1.5px);
         max-height: 80px;
         padding: 8px 0px 7px 0px;
       }
