@@ -1,16 +1,69 @@
 .delivery {
+  @media (max-width: 992px) {
+    padding-top: 16px;
+  }
   .delivery_block {
     background-color: #fff;
     padding: 24px 0 0;
+    @media (max-width: 768px) {
+      padding: 16px 0 0;
+    }
+    .row {
+      @media (max-width: 768px) {
+        gap: 16px 0;
+        padding: 0 16px;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
     .truck_overlay {
       bottom: 6px;
       right: 80px;
       max-width: 380px;
+      @media (max-width: 1400px) {
+        bottom: 37px;
+        right: 143px;
+        max-width: 273px;
+      }
+      @media (max-width: 992px) {
+        right: 39px;
+      }
+      @media (max-width: 768px) {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: 5px;
+        max-width: 224px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
     }
     .row {
       padding: 0;
       .col-md-6 {
         padding-right: 8px !important;
+        padding-left: 0 !important;
+        @media (max-width: 768px) {
+          padding-right: 0 !important;
+          padding-left: 0 !important;
+          width: 100%;
+        }
+        &:first-child {
+          @media (max-width: 992px) {
+            background: #fafafa;
+          }
+          .w-100 {
+            @media (max-width: 1200px) {
+              height: 100% !important;
+              object-fit: cover;
+              border-radius: 4px;
+              min-height: 284px;
+            }
+          }
+        }
         &:last-child {
           padding-right: 0;
           padding-left: 8px !important;
@@ -19,6 +72,18 @@
     }
     .delivery_text {
       padding: 24px 47px 24px 24px;
+      @media (max-width: 1400px) {
+        top: 20px !important;
+      }
+      @media (max-width: 992px) {
+        margin-bottom: 0 !important;
+      }
+      @media (max-width: 768px) {
+        top: 0 !important;
+        margin-bottom: 0 !important;
+        font-size: 14px;
+        padding: 16px;
+      }
     }
 
     .tk_list {
@@ -33,6 +98,10 @@
           border-radius: 4px;
           background: #fafafa;
           padding: 10px 40px;
+          @media (max-width: 992px) {
+            padding: 0 16px;
+            height: 60px;
+          }
           img {
             transition: all 0.2s linear;
           }
@@ -43,6 +112,12 @@
           }
           span {
             width: 33%;
+            @media (max-width: 992px) {
+              font-size: 14px;
+            }
+            @media (max-width: 768px) {
+              width: 35%;
+            }
           }
         }
       }
@@ -50,15 +125,28 @@
 
     .delivery_items {
       margin-top: 16px;
+      @media (max-width: 768px) {
+        gap: 8px 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
       h6 {
         font-weight: bold;
         color: #e4002b;
         margin-bottom: 4px;
+        @media (max-width: 768px) {
+          font-weight: 100;
+        }
       }
       p {
         font-size: 0.85rem;
         margin: 0;
         font-weight: 700;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+          font-size: 14px;
+          text-transform: none;
+        }
       }
       .delivery_item {
         padding: 20px 10px;
@@ -66,6 +154,10 @@
         background: #fff;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.04);
         width: calc(25% - 8px);
+        @media (max-width: 768px) {
+          width: calc(50% - 4px);
+          padding: 8px;
+        }
       }
     }
   }

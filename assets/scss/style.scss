@@ -21,6 +21,7 @@
 @import "footer.scss";
 @import "breadcrumb.scss";
 @import "modal.scss";
+@import "filter.scss";
 *,
 h2,
 h3,
@@ -34,17 +35,16 @@ p {
 }
 :root {
   /* Шрифты */
-  --btn-bg: #E53935;
+  --btn-bg: #e53935;
   --color-secondary: #999;
   --font-fmily: "PT Sans", sans-serif;
   /* Размеры заголовков */
   --font-size-h1: 36px;
   --font-size-h2: 24px;
-  --font-size-h3: 20px
-  /* Цвета кнопок */
+  --font-size-h3: 20px;
   --btn-bg-opacity: #fbe1e0;
   --btn-text-color: #ffffff;
-  --btn-hover-bg: #0056b3;
+  --btn-hover-bg: #cc2f2c;
   --btn-hover-text: #ffffff;
 }
 
@@ -103,10 +103,10 @@ body {
 }
 main {
   padding-top: 152px;
-  @media (max-width:992px) {
+  @media (max-width: 992px) {
     padding-top: 83px;
   }
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     padding-top: 121px;
   }
 }
@@ -148,10 +148,9 @@ main {
       text-transform: uppercase;
       padding: 3px 16.5px;
       @media (max-width: 768px) {
-        padding:4px 8px;
+        padding: 4px 8px;
         font-size: 12px;
       }
-
     }
     img {
       width: 100%;

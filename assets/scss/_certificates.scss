@@ -1,15 +1,46 @@
 .certificates {
   padding-top: 80px;
   padding-bottom: 80px;
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 24px;
+    .section_title {
+      margin-bottom: 8px;
+    }
+  }
+  &_block {
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
   .content {
     width: calc(75% - 16px);
     gap: 20px;
+    @media (max-width: 1400px) {
+      width: calc(70% - 16px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      gap: 8px;
+    }
     ul {
       padding-left: 40px;
       gap: 10px;
+      @media (max-width: 768px) {
+        padding-left: 25px;
+      }
     }
     li {
       list-style: initial;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    p {
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
     }
   }
   .swiper-button-next::after,
@@ -24,6 +55,9 @@
     background: #fff;
     backdrop-filter: blur(1px);
     opacity: 1;
+    @media (max-width: 768px) {
+      display: none !important;
+    }
     svg {
       width: 20px;
     }
@@ -36,6 +70,28 @@
   }
   .swiper {
     width: 100%;
+    padding-bottom: 32px;
+    .swiper-slide {
+      img {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+    .swiper-pagination {
+      display: none;
+      @media (max-width: 768px) {
+        bottom: 0px;
+        display: block;
+      }
+      .swiper-pagination-bullet{
+        @media (max-width: 768px) {
+          width: 8px;
+          height: 8px;
+          background: var(--btn-bg);
+        }
+      }
+    }
   }
   .sertficates_content {
     border-radius: 4px;
@@ -44,7 +100,16 @@
     padding: 12px 52px;
     gap: 8px;
     position: relative;
-    
+    @media (max-width: 1400px) {
+      width: calc(30% - 8px);
+      padding: 10px 25px;
+    }
+    @media (max-width: 768px) {
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      padding: 16px;
+      padding-right: 0;
+    }
     .sertficates_content_bottom {
       width: 100%;
       color: #212121;
@@ -52,6 +117,9 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      @media (max-width: 768px) {
+        display: none !important;
+      }
       button {
         cursor: pointer;
         font-size: 14px;
@@ -59,6 +127,9 @@
         outline: none;
         border: 0;
         background: transparent;
+      }
+      span {
+        color: #212121;
       }
     }
   }

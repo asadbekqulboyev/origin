@@ -47,6 +47,11 @@
       align-items: center;
       padding: 8px 0;
       gap: 40px;
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
       @media (max-width: 992px) {
         display: none;
         flex-direction: column;
@@ -66,6 +71,11 @@
       display: flex;
       align-items: center;
       gap: 4px;
+      &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       @media (max-width: 768px) {
         flex-direction: column;
         width: 100%;
@@ -160,6 +170,9 @@
     }
   }
   &__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
     @media (max-width: 992px) {
       width: 75%;
     }
@@ -167,8 +180,7 @@
       width: 100%;
     }
     .header__logo {
-      display: none !important;
-
+      display: none;
       h2 {
         text-transform: uppercase;
         color: #212121;
@@ -180,6 +192,28 @@
         font-weight: 700;
         color: #212121;
       }
+      .catalog {
+        padding: 12px 20px;
+        border-radius: 4px;
+        background: #e53935;
+        color: #fafafa;
+        text-transform: uppercase;
+        flex: 1;
+        cursor: pointer;
+        //  d-lg-flex d-none align-items-center gap-2
+        align-items: center;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @media (max-width: 992px) {
+          display: none !important;
+        }
+        @media (max-width: 992px) {
+          height: fit-content;
+          width: fit-content;
+          flex: 0 0 auto;
+        }
+      }
     }
     .catalog {
       padding: 12px 20px;
@@ -190,6 +224,7 @@
       flex: 1;
       cursor: pointer;
       @media (max-width: 992px) {
+        display: none;
         height: fit-content;
         width: fit-content;
         flex: 0 0 auto;
@@ -312,6 +347,12 @@
           padding: 11.5px 20px;
           color: #212121;
           height: 40px;
+          @media (max-width: 992px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
           img {
             opacity: 0;
             transition: all 0.2s linear;
@@ -421,7 +462,9 @@
       }
     }
     .header__logo {
-      display: flex !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       flex: 0 0 auto;
     }
     .header__top {

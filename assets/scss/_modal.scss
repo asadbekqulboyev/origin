@@ -24,6 +24,8 @@
   &__profile {
     font-size: 14px;
     gap: 8px;
+    display: flex;
+    justify-content: center;
     button {
       padding: 0;
       color: var(--btn-bg);
@@ -35,13 +37,14 @@
     @media (max-width: 768px) {
       padding: 24px 16px;
     }
-   
+
     .button {
       margin-top: 8px;
     }
     .input_info {
       gap: 8px;
       margin-top: 32px;
+      display: flex;
       @media (max-width: 768px) {
         margin-top: 24px;
       }

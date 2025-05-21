@@ -162,6 +162,18 @@ $(document).ready(function () {
   const sertficatesSlide = new Swiper(".sertficates_slide", {
     slidesPerView: 1,
     spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+      },
+      768: {
+        slidesPerView: 1,
+      },
+    },
+    pagination: {
+      el: ".certificates .swiper-pagination",
+      clickable: true,
+    },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -234,5 +246,42 @@ $(document).ready(function () {
       $(this).toggleClass("active");
       $(this).next(".header_mobile .sidebar__subcontent").slideToggle();
     });
+  }
+  // Фильтр
+  $(".filter__checkbox_header").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+    $(this).next(".filter__checkbox_content").slideToggle();
+  });
+  $(".open__lists").each(function () {
+    let inputCount = $(this).children("label").length;
+    $(this)
+      .next(".open__btn")
+      .find(".open__btn_number")
+      .text("Ещё " + inputCount);
+  });
+  $(".open__btn").click(function (e) {
+    e.preventDefault();
+    $(this).hide();
+    $(this).prev(".open__lists").fadeIn().css("display", "flex");
+  });
+  $("#price_range_slider").ionRangeSlider({
+    type: "double",
+    min: 250,
+    max: 5000,
+    from: 250,
+    to: 2500,
+    postfix: " ₽",
+    onStart: function (data) {
+      updatePriceInputs(data.from, data.to);
+    },
+    onChange: function (data) {
+      updatePriceInputs(data.from, data.to);
+    },
+  });
+
+  function updatePriceInputs(from, to) {
+    $(".filter__input_from").val(from);
+    $(".filter__input_to").val(to);
   }
 });
